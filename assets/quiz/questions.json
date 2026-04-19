@@ -1,0 +1,242 @@
+[
+  {
+    "category": "Transmission Basics",
+    "question": "Které faktory ovlivňují kvalitu přenosu signálu?",
+    "answers": ["šířka pásma", "SNR", "barva kabelu", "útlum"],
+    "correct": [0, 1, 3],
+    "explanations": [
+      "vyšší šířka pásma umožňuje přenášet více dat.",
+      "vyšší poměr signál-šum znamená méně chyb při přenosu.",
+      "barva nemá žádný vliv na přenos signálu.",
+      "větší útlum zhoršuje kvalitu signálu na vzdálenost."
+    ]
+  },
+  {
+    "category": "Transmission Basics",
+    "question": "Co je latence?",
+    "answers": ["zpoždění přenosu", "rychlost přenosu", "počet bitů", "úroveň šumu"],
+    "correct": [0],
+    "explanations": [
+      "latence přímo znamená časové zpoždění mezi odesláním a přijetím.",
+      "rychlost je množství dat za čas, ne zpoždění.",
+      "počet bitů nesouvisí s časovým zpožděním.",
+      "šum ovlivňuje kvalitu, ne latenci."
+    ]
+  },
+  {
+    "category": "Signals",
+    "question": "Jaký vztah platí mezi frekvencí a vlnovou délkou?",
+    "answers": ["jsou přímo úměrné", "jsou nepřímo úměrné", "nemají vztah", "závisí jen na médiu"],
+    "correct": [1],
+    "explanations": [
+      "to je nesprávné, protože při vyšší frekvenci je kratší vlna.",
+      "správně, protože λ=c/f.",
+      "vztah existuje fyzikálně vždy.",
+      "médium ovlivňuje rychlost, ale vztah zůstává."
+    ]
+  },
+  {
+    "category": "Signals",
+    "question": "Co platí pro vyšší frekvence?",
+    "answers": ["kratší vlnová délka", "větší dosah", "větší útlum", "nižší energie"],
+    "correct": [0, 2],
+    "explanations": [
+      "vyšší frekvence znamená kratší vlnu.",
+      "vyšší frekvence se obvykle šíří hůře na velké vzdálenosti.",
+      "vyšší frekvence se více tlumí prostředím.",
+      "energie roste s frekvencí, takže toto je nesprávné."
+    ]
+  },
+  {
+    "category": "MAC",
+    "question": "Které vlastnosti má CSMA/CD?",
+    "answers": ["detekce kolizí během vysílání", "použití ve Wi-Fi", "použití v Ethernetu", "vyhýbání se kolizím"],
+    "correct": [0, 2],
+    "explanations": [
+      "CSMA/CD aktivně detekuje kolize při přenosu.",
+      "Wi-Fi používá CSMA/CA, ne CSMA/CD.",
+      "klasický Ethernet používal CSMA/CD.",
+      "to je vlastnost CSMA/CA, ne CD."
+    ]
+  },
+  {
+    "category": "MAC",
+    "question": "Které vlastnosti má CSMA/CA?",
+    "answers": ["vyhýbání se kolizím", "ACK rámce", "detekce kolizí během vysílání", "použití ve Wi-Fi"],
+    "correct": [0, 1, 3],
+    "explanations": [
+      "CA znamená collision avoidance.",
+      "potvrzení se používá kvůli absenci detekce kolizí.",
+      "to CA nedokáže.",
+      "Wi-Fi standard používá CSMA/CA."
+    ]
+  },
+  {
+    "category": "Nyquist",
+    "question": "Máme B = 2 kHz. Jaká je maximální symbolová rychlost?",
+    "answers": ["2 kbaud", "4 kbaud", "1 kbaud", "8 kbaud"],
+    "correct": [1],
+    "explanations": [
+      "to by platilo pro jiný vztah, ne Nyquist.",
+      "správně, protože Nyquist: 2B.",
+      "příliš nízká hodnota.",
+      "překračuje Nyquistův limit."
+    ]
+  },
+  {
+    "category": "Nyquist",
+    "question": "Co ovlivňuje Nyquistovu rychlost?",
+    "answers": ["šířka pásma", "SNR", "počet úrovní signálu", "latence"],
+    "correct": [0, 2],
+    "explanations": [
+      "Nyquist přímo závisí na šířce pásma.",
+      "SNR patří do Shannonova teorému, ne Nyquista.",
+      "více úrovní zvyšuje bitovou rychlost.",
+      "latence neovlivňuje symbolovou rychlost."
+    ]
+  },
+  {
+    "category": "Shannon",
+    "question": "Co říká Shannonův teorém?",
+    "answers": ["maximální kapacita závisí na B a SNR", "kapacita nezávisí na šumu", "kapacita je lineární se SNR", "nelze překročit určitou rychlost"],
+    "correct": [0, 3],
+    "explanations": [
+      "to je základní definice.",
+      "šum je klíčový faktor.",
+      "vztah je logaritmický.",
+      "existuje teoretický limit."
+    ]
+  },
+  {
+    "category": "Shannon",
+    "question": "Co se stane při zvýšení SNR?",
+    "answers": ["vyšší kapacita", "nižší kapacita", "žádná změna", "vyšší chybovost"],
+    "correct": [0],
+    "explanations": [
+      "vyšší SNR zvyšuje kapacitu kanálu.",
+      "opak je pravda.",
+      "SNR má přímý vliv.",
+      "vyšší SNR naopak snižuje chyby."
+    ]
+  },
+  {
+    "category": "OSI Physical",
+    "question": "Co řeší fyzická vrstva OSI?",
+    "answers": ["napěťové úrovně", "konektory", "směrování", "přenos bitů"],
+    "correct": [0, 1, 3],
+    "explanations": [
+      "fyzická vrstva definuje elektrické signály.",
+      "zahrnuje mechanické vlastnosti připojení.",
+      "to je úloha síťové vrstvy.",
+      "fyzická vrstva přenáší surové bity."
+    ]
+  },
+  {
+    "category": "OSI Data Link",
+    "question": "Co řeší linková vrstva?",
+    "answers": ["rámcování", "CRC", "IP adresace", "MAC adresy"],
+    "correct": [0, 1, 3],
+    "explanations": [
+      "data se balí do rámců.",
+      "slouží k detekci chyb.",
+      "patří do síťové vrstvy.",
+      "linková vrstva pracuje s MAC adresami."
+    ]
+  },
+  {
+    "category": "Wireless",
+    "question": "Proč nelze použít CSMA/CD ve Wi-Fi?",
+    "answers": ["nelze detekovat kolize při vysílání", "Wi-Fi nepoužívá rámce", "kolize nejsou možné", "zařízení neumí přijímat a vysílat současně"],
+    "correct": [0, 3],
+    "explanations": [
+      "zařízení neumí poslouchat při vysílání.",
+      "Wi-Fi rámce používá.",
+      "kolize jsou běžné.",
+      "to je hlavní důvod."
+    ]
+  },
+  {
+    "category": "Wireless",
+    "question": "Co je hidden node problém?",
+    "answers": ["uzly se nevidí navzájem", "uzly vysílají na stejné frekvenci", "dochází ke kolizím", "řeší se pomocí RTS/CTS"],
+    "correct": [0, 2, 3],
+    "explanations": [
+      "uzly nejsou v dosahu.",
+      "to není definice problému.",
+      "kolize vznikají u přijímače.",
+      "tento mechanismus problém zmírňuje."
+    ]
+  },
+  {
+    "category": "Mobile Networks",
+    "question": "Které tvrzení o mobilních sítích je správné?",
+    "answers": ["1G analog", "2G digitální", "3G multimédia", "5G nepoužívá pakety"],
+    "correct": [0, 1, 2],
+    "explanations": [
+      "první generace byla analogová.",
+      "druhá generace přešla na digitální přenos.",
+      "3G umožnilo data a multimédia.",
+      "5G je plně paketové."
+    ]
+  },
+  {
+    "category": "Mobile Networks",
+    "question": "Co přináší 5G?",
+    "answers": ["nižší latence", "vyšší hustota zařízení", "nižší rychlosti", "podpora IoT"],
+    "correct": [0, 1, 3],
+    "explanations": [
+      "5G je optimalizované na nízké zpoždění.",
+      "podporuje masivní IoT.",
+      "5G přináší vyšší rychlosti.",
+      "je klíčový use-case 5G."
+    ]
+  },
+  {
+    "category": "Modulation",
+    "question": "Co je QAM?",
+    "answers": ["kombinace amplitudy a fáze", "jen frekvence", "jen fáze", "jen amplituda"],
+    "correct": [0],
+    "explanations": [
+      "QAM moduluje obě vlastnosti.",
+      "to by byla FSK.",
+      "to odpovídá PSK.",
+      "to odpovídá ASK."
+    ]
+  },
+  {
+    "category": "Modulation",
+    "question": "Co platí pro vyšší modulaci?",
+    "answers": ["vyšší rychlost", "vyšší nároky na SNR", "nižší chybovost", "nižší kapacita"],
+    "correct": [0, 1],
+    "explanations": [
+      "více bitů na symbol.",
+      "potřebuje čistší signál.",
+      "vyšší modulace je citlivější na chyby.",
+      "naopak zvyšuje kapacitu."
+    ]
+  },
+  {
+    "category": "Infrastructure",
+    "question": "Která zařízení pracují na fyzické vrstvě?",
+    "answers": ["hub", "repeater", "router", "switch"],
+    "correct": [0, 1],
+    "explanations": [
+      "pouze přeposílá signál bez logiky.",
+      "regeneruje signál na fyzické vrstvě.",
+      "pracuje na síťové vrstvě.",
+      "pracuje na linkové vrstvě."
+    ]
+  },
+  {
+    "category": "Infrastructure",
+    "question": "Která zařízení pracují na síťové vrstvě?",
+    "answers": ["router", "switch", "bridge", "firewall"],
+    "correct": [0],
+    "explanations": [
+      "směruje pakety podle IP adres.",
+      "pracuje primárně na L2.",
+      "je také L2 zařízení.",
+      "není čistě síťová vrstva, může být vícevrstvový."
+    ]
+  }
+]
