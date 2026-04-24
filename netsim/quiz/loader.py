@@ -41,12 +41,15 @@ def _parse_question(item: Any, index: int) -> QuizQuestion:
 
     category = _required_string(item, "category", index)
     prompt = _required_string(item, "question", index)
+    question_explanation = item.get("explanation", "")
     answers = item.get("answers")
     correct = item.get("correct")
     explanations = item.get("explanations", item.get("option_explanations"))
 
     if not isinstance(answers, list) or not answers:
         raise QuestionLoadError(f"Question {index} must have a non-empty answers array.")
+    if not isinstance(question_explanation, str):
+        raise QuestionLoadError(f"Question {index} explanation must be a string.")
     if not all(isinstance(answer, str) and answer.strip() for answer in answers):
         raise QuestionLoadError(f"Question {index} answers must be non-empty strings.")
     if explanations is None:
@@ -69,6 +72,7 @@ def _parse_question(item: Any, index: int) -> QuizQuestion:
     return QuizQuestion(
         category=category.strip(),
         prompt=prompt.strip(),
+        explanation=question_explanation.strip(),
         answers=tuple(answer.strip() for answer in answers),
         explanations=tuple(explanation.strip() for explanation in explanations),
         correct=correct_set,

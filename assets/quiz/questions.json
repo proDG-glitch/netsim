@@ -1,242 +1,1411 @@
 [
   {
-    "category": "Transmission Basics",
-    "question": "Které faktory ovlivňují kvalitu přenosu signálu?",
-    "answers": ["šířka pásma", "SNR", "barva kabelu", "útlum"],
-    "correct": [0, 1, 3],
+    "category": "Úvod",
+    "question": "Které z následujících patří mezi vedená (guided) média?",
+    "answers": [
+      "Kroucená dvoulinka",
+      "Koaxiální kabel",
+      "Atmosféra",
+      "Optické vlákno"
+    ],
+    "correct": [
+      0,
+      1,
+      3
+    ],
     "explanations": [
-      "vyšší šířka pásma umožňuje přenášet více dat.",
-      "vyšší poměr signál-šum znamená méně chyb při přenosu.",
-      "barva nemá žádný vliv na přenos signálu.",
-      "větší útlum zhoršuje kvalitu signálu na vzdálenost."
-    ]
+      "Je to fyzické vedení signálu.",
+      "Také vedené médium.",
+      "To je bezdrátové médium.",
+      "Přenáší světlo fyzickým vedením."
+    ],
+    "explanation": "Guided media jsou fyzická přenosová vedení."
   },
   {
-    "category": "Transmission Basics",
-    "question": "Co je latence?",
-    "answers": ["zpoždění přenosu", "rychlost přenosu", "počet bitů", "úroveň šumu"],
-    "correct": [0],
+    "category": "Úvod",
+    "question": "Co charakterizuje bezdrátová média?",
+    "answers": [
+      "Signál se šíří v atmosféře nebo vakuu",
+      "Signál je veden kabelem",
+      "Používají se antény",
+      "Jsou vždy stabilnější než kabelové"
+    ],
+    "correct": [
+      0,
+      2
+    ],
     "explanations": [
-      "latence přímo znamená časové zpoždění mezi odesláním a přijetím.",
-      "rychlost je množství dat za čas, ne zpoždění.",
-      "počet bitů nesouvisí s časovým zpožděním.",
-      "šum ovlivňuje kvalitu, ne latenci."
-    ]
+      "To je základní vlastnost.",
+      "To je wired komunikace.",
+      "Zajišťují vysílání/příjem.",
+      "Naopak jsou méně stabilní."
+    ],
+    "explanation": "Bezdrátová média využívají EM vlny a antény."
   },
   {
-    "category": "Signals",
-    "question": "Jaký vztah platí mezi frekvencí a vlnovou délkou?",
-    "answers": ["jsou přímo úměrné", "jsou nepřímo úměrné", "nemají vztah", "závisí jen na médiu"],
-    "correct": [1],
+    "category": "Úvod",
+    "question": "Která vrstva OSI modelu řeší přenos bitů?",
+    "answers": [
+      "Síťová",
+      "Fyzická",
+      "Transportní",
+      "Aplikační"
+    ],
+    "correct": [
+      1
+    ],
     "explanations": [
-      "to je nesprávné, protože při vyšší frekvenci je kratší vlna.",
-      "správně, protože λ=c/f.",
-      "vztah existuje fyzikálně vždy.",
-      "médium ovlivňuje rychlost, ale vztah zůstává."
-    ]
+      "Řeší routování.",
+      "Přenáší bity jako signál.",
+      "Řeší segmenty.",
+      "Je nejvyšší vrstva."
+    ],
+    "explanation": "Fyzická vrstva pracuje se signály a bity."
   },
   {
-    "category": "Signals",
-    "question": "Co platí pro vyšší frekvence?",
-    "answers": ["kratší vlnová délka", "větší dosah", "větší útlum", "nižší energie"],
-    "correct": [0, 2],
+    "category": "Úvod",
+    "question": "Co je PDU na transportní vrstvě?",
+    "answers": [
+      "Rámec",
+      "Segment nebo datagram",
+      "Bit",
+      "Paket"
+    ],
+    "correct": [
+      1
+    ],
     "explanations": [
-      "vyšší frekvence znamená kratší vlnu.",
-      "vyšší frekvence se obvykle šíří hůře na velké vzdálenosti.",
-      "vyšší frekvence se více tlumí prostředím.",
-      "energie roste s frekvencí, takže toto je nesprávné."
-    ]
+      "To je linková vrstva.",
+      "Používá TCP/UDP.",
+      "To je fyzická vrstva.",
+      "To je síťová vrstva."
+    ],
+    "explanation": "Transportní vrstva pracuje se segmenty/datagramy."
   },
   {
-    "category": "MAC",
-    "question": "Které vlastnosti má CSMA/CD?",
-    "answers": ["detekce kolizí během vysílání", "použití ve Wi-Fi", "použití v Ethernetu", "vyhýbání se kolizím"],
-    "correct": [0, 2],
+    "category": "Úvod",
+    "question": "Která vlastnost je typická pro bezdrátové sítě?",
+    "answers": [
+      "Topologie je dynamická",
+      "Médium je stabilní",
+      "Adresy jsou pevné",
+      "Přenos je vždy spolehlivý"
+    ],
+    "correct": [
+      0
+    ],
     "explanations": [
-      "CSMA/CD aktivně detekuje kolize při přenosu.",
-      "Wi-Fi používá CSMA/CA, ne CSMA/CD.",
-      "klasický Ethernet používal CSMA/CD.",
-      "to je vlastnost CSMA/CA, ne CD."
-    ]
+      "Uzly se pohybují.",
+      "Je náchylné k rušení.",
+      "Nejsou vázány na lokaci.",
+      "Dochází k chybám."
+    ],
+    "explanation": "Bezdrátové sítě jsou dynamické a méně stabilní."
   },
   {
-    "category": "MAC",
-    "question": "Které vlastnosti má CSMA/CA?",
-    "answers": ["vyhýbání se kolizím", "ACK rámce", "detekce kolizí během vysílání", "použití ve Wi-Fi"],
-    "correct": [0, 1, 3],
+    "category": "Úvod",
+    "question": "Jaká je hlavní výhoda bezdrátových sítí?",
+    "answers": [
+      "Mobilita",
+      "Vyšší bezpečnost",
+      "Nižší latence",
+      "Vyšší rychlost než kabel"
+    ],
+    "correct": [
+      0
+    ],
     "explanations": [
-      "CA znamená collision avoidance.",
-      "potvrzení se používá kvůli absenci detekce kolizí.",
-      "to CA nedokáže.",
-      "Wi-Fi standard používá CSMA/CA."
-    ]
+      "Uživatelé nejsou vázáni kabelem.",
+      "Bezdrátové jsou méně bezpečné.",
+      "Často mají vyšší latenci.",
+      "Obvykle nižší."
+    ],
+    "explanation": "Mobilita je hlavní benefit."
   },
   {
-    "category": "Nyquist",
-    "question": "Máme B = 2 kHz. Jaká je maximální symbolová rychlost?",
-    "answers": ["2 kbaud", "4 kbaud", "1 kbaud", "8 kbaud"],
-    "correct": [1],
+    "category": "Úvod",
+    "question": "Co znamená infrastructure-based network?",
+    "answers": [
+      "Síť bez routerů",
+      "Síť řízená komunikační infrastrukturou",
+      "Peer-to-peer síť",
+      "Kabelová síť"
+    ],
+    "correct": [
+      1
+    ],
     "explanations": [
-      "to by platilo pro jiný vztah, ne Nyquist.",
-      "správně, protože Nyquist: 2B.",
-      "příliš nízká hodnota.",
-      "překračuje Nyquistův limit."
-    ]
+      "To je ad hoc.",
+      "Používá AP/routery.",
+      "To je ad hoc.",
+      "Nesouvisí."
+    ],
+    "explanation": "Infrastructure-based sítě využívají centrální prvky."
   },
   {
-    "category": "Nyquist",
-    "question": "Co ovlivňuje Nyquistovu rychlost?",
-    "answers": ["šířka pásma", "SNR", "počet úrovní signálu", "latence"],
-    "correct": [0, 2],
+    "category": "Úvod",
+    "question": "Co je ad hoc síť?",
+    "answers": [
+      "Síť bez infrastruktury",
+      "Síť s AP",
+      "Kabelová síť",
+      "Internet"
+    ],
+    "correct": [
+      0
+    ],
     "explanations": [
-      "Nyquist přímo závisí na šířce pásma.",
-      "SNR patří do Shannonova teorému, ne Nyquista.",
-      "více úrovní zvyšuje bitovou rychlost.",
-      "latence neovlivňuje symbolovou rychlost."
-    ]
+      "Vzniká spontánně.",
+      "To je infrastrukturní.",
+      "Nesouvisí.",
+      "Není typ sítě."
+    ],
+    "explanation": "Ad hoc sítě nemají centrální řízení."
   },
   {
-    "category": "Shannon",
-    "question": "Co říká Shannonův teorém?",
-    "answers": ["maximální kapacita závisí na B a SNR", "kapacita nezávisí na šumu", "kapacita je lineární se SNR", "nelze překročit určitou rychlost"],
-    "correct": [0, 3],
+    "category": "Úvod",
+    "question": "Které sítě patří mezi WWAN?",
+    "answers": [
+      "LTE",
+      "Wi-Fi",
+      "Satelitní sítě",
+      "Bluetooth"
+    ],
+    "correct": [
+      0,
+      2
+    ],
     "explanations": [
-      "to je základní definice.",
-      "šum je klíčový faktor.",
-      "vztah je logaritmický.",
-      "existuje teoretický limit."
-    ]
+      "Mobilní síť.",
+      "To je WLAN.",
+      "Velké pokrytí.",
+      "To je WPAN."
+    ],
+    "explanation": "WWAN pokrývá velké oblasti."
   },
   {
-    "category": "Shannon",
-    "question": "Co se stane při zvýšení SNR?",
-    "answers": ["vyšší kapacita", "nižší kapacita", "žádná změna", "vyšší chybovost"],
-    "correct": [0],
+    "category": "Úvod",
+    "question": "Co charakterizuje WLAN?",
+    "answers": [
+      "Malý rozsah",
+      "Použití Wi-Fi",
+      "Globální pokrytí",
+      "Bluetooth"
+    ],
+    "correct": [
+      0,
+      1
+    ],
     "explanations": [
-      "vyšší SNR zvyšuje kapacitu kanálu.",
-      "opak je pravda.",
-      "SNR má přímý vliv.",
-      "vyšší SNR naopak snižuje chyby."
-    ]
+      "Např. budova.",
+      "Standard 802.11.",
+      "To je WWAN.",
+      "To je WPAN."
+    ],
+    "explanation": "WLAN je lokální síť."
   },
   {
-    "category": "OSI Physical",
-    "question": "Co řeší fyzická vrstva OSI?",
-    "answers": ["napěťové úrovně", "konektory", "směrování", "přenos bitů"],
-    "correct": [0, 1, 3],
+    "category": "Úvod",
+    "question": "Co charakterizuje WPAN?",
+    "answers": [
+      "Velký dosah",
+      "Bluetooth",
+      "Ad hoc komunikace",
+      "Pouze kabely"
+    ],
+    "correct": [
+      1,
+      2
+    ],
     "explanations": [
-      "fyzická vrstva definuje elektrické signály.",
-      "zahrnuje mechanické vlastnosti připojení.",
-      "to je úloha síťové vrstvy.",
-      "fyzická vrstva přenáší surové bity."
-    ]
+      "Má malý dosah.",
+      "Typický příklad.",
+      "Často bez infrastruktury.",
+      "Je bezdrátová."
+    ],
+    "explanation": "WPAN je krátký dosah, např. Bluetooth."
   },
   {
-    "category": "OSI Data Link",
-    "question": "Co řeší linková vrstva?",
-    "answers": ["rámcování", "CRC", "IP adresace", "MAC adresy"],
-    "correct": [0, 1, 3],
+    "category": "Úvod",
+    "question": "Co je multi-hop síť?",
+    "answers": [
+      "Komunikace přes více uzlů",
+      "Přímá komunikace",
+      "Uzly směrují data",
+      "Pouze AP"
+    ],
+    "correct": [
+      0,
+      2
+    ],
     "explanations": [
-      "data se balí do rámců.",
-      "slouží k detekci chyb.",
-      "patří do síťové vrstvy.",
-      "linková vrstva pracuje s MAC adresami."
-    ]
+      "Více skoků.",
+      "To je single-hop.",
+      "Fungují jako routery.",
+      "To není multi-hop."
+    ],
+    "explanation": "Multi-hop využívá více uzlů pro přenos."
   },
   {
-    "category": "Wireless",
-    "question": "Proč nelze použít CSMA/CD ve Wi-Fi?",
-    "answers": ["nelze detekovat kolize při vysílání", "Wi-Fi nepoužívá rámce", "kolize nejsou možné", "zařízení neumí přijímat a vysílat současně"],
-    "correct": [0, 3],
+    "category": "Úvod",
+    "question": "Co je single-hop síť?",
+    "answers": [
+      "Více skoků",
+      "Maximálně jeden mezilehlý uzel",
+      "Každý uzel routuje",
+      "Ad hoc vždy"
+    ],
+    "correct": [
+      1
+    ],
     "explanations": [
-      "zařízení neumí poslouchat při vysílání.",
-      "Wi-Fi rámce používá.",
-      "kolize jsou běžné.",
-      "to je hlavní důvod."
-    ]
+      "To je multi-hop.",
+      "Např. AP.",
+      "Není nutné.",
+      "Může být infra."
+    ],
+    "explanation": "Single-hop = přímá komunikace."
   },
   {
-    "category": "Wireless",
-    "question": "Co je hidden node problém?",
-    "answers": ["uzly se nevidí navzájem", "uzly vysílají na stejné frekvenci", "dochází ke kolizím", "řeší se pomocí RTS/CTS"],
-    "correct": [0, 2, 3],
+    "category": "Úvod",
+    "question": "Jaký je rozdíl mezi infrastrukturní a ad hoc sítí?",
+    "answers": [
+      "Infrastrukturní má AP",
+      "Ad hoc je peer-to-peer",
+      "Ad hoc má vyšší stabilitu",
+      "Infrastrukturní nemá směrování"
+    ],
+    "correct": [
+      0,
+      1
+    ],
     "explanations": [
-      "uzly nejsou v dosahu.",
-      "to není definice problému.",
-      "kolize vznikají u přijímače.",
-      "tento mechanismus problém zmírňuje."
-    ]
+      "Centrální řízení.",
+      "Bez centrálního bodu.",
+      "Naopak méně stabilní.",
+      "Má centrální řízení."
+    ],
+    "explanation": "Hlavní rozdíl je v existenci infrastruktury."
   },
   {
-    "category": "Mobile Networks",
-    "question": "Které tvrzení o mobilních sítích je správné?",
-    "answers": ["1G analog", "2G digitální", "3G multimédia", "5G nepoužívá pakety"],
-    "correct": [0, 1, 2],
+    "category": "Úvod",
+    "question": "Co je MANET?",
+    "answers": [
+      "Mobilní ad hoc síť",
+      "Kabelová síť",
+      "Pouze Wi-Fi síť",
+      "Datové centrum"
+    ],
+    "correct": [
+      0
+    ],
     "explanations": [
-      "první generace byla analogová.",
-      "druhá generace přešla na digitální přenos.",
-      "3G umožnilo data a multimédia.",
-      "5G je plně paketové."
-    ]
+      "Uzly jsou mobilní.",
+      "Nesouvisí.",
+      "Širší koncept.",
+      "Nesouvisí."
+    ],
+    "explanation": "MANET je mobilní ad hoc síť."
   },
   {
-    "category": "Mobile Networks",
-    "question": "Co přináší 5G?",
-    "answers": ["nižší latence", "vyšší hustota zařízení", "nižší rychlosti", "podpora IoT"],
-    "correct": [0, 1, 3],
+    "category": "Úvod",
+    "question": "Co je WSN?",
+    "answers": [
+      "Senzorová síť",
+      "Mobilní síť",
+      "Wi-Fi síť",
+      "Kabelová síť"
+    ],
+    "correct": [
+      0
+    ],
     "explanations": [
-      "5G je optimalizované na nízké zpoždění.",
-      "podporuje masivní IoT.",
-      "5G přináší vyšší rychlosti.",
-      "je klíčový use-case 5G."
-    ]
+      "Sběr dat.",
+      "To je WWAN.",
+      "To je WLAN.",
+      "Nesouvisí."
+    ],
+    "explanation": "WSN slouží pro sběr a monitoring."
   },
   {
-    "category": "Modulation",
-    "question": "Co je QAM?",
-    "answers": ["kombinace amplitudy a fáze", "jen frekvence", "jen fáze", "jen amplituda"],
-    "correct": [0],
+    "category": "Úvod",
+    "question": "Co je hlavní charakteristika IoT?",
+    "answers": [
+      "Propojení zařízení k internetu",
+      "Pouze mobilní telefony",
+      "Pouze kabelové připojení",
+      "Nepoužívá brány"
+    ],
+    "correct": [
+      0
+    ],
     "explanations": [
-      "QAM moduluje obě vlastnosti.",
-      "to by byla FSK.",
-      "to odpovídá PSK.",
-      "to odpovídá ASK."
-    ]
+      "Základní princip.",
+      "Zahrnuje i senzory.",
+      "Používá i bezdrát.",
+      "Používají se gatewaye."
+    ],
+    "explanation": "IoT propojuje zařízení a senzory."
   },
   {
-    "category": "Modulation",
-    "question": "Co platí pro vyšší modulaci?",
-    "answers": ["vyšší rychlost", "vyšší nároky na SNR", "nižší chybovost", "nižší kapacita"],
-    "correct": [0, 1],
+    "category": "Úvod",
+    "question": "Proč nelze přímo připojit IoT zařízení k internetu?",
+    "answers": [
+      "Nemají dostatečný výkon",
+      "Nemají IP adresu",
+      "Nemají baterii",
+      "Jsou příliš velké"
+    ],
+    "correct": [
+      0
+    ],
     "explanations": [
-      "více bitů na symbol.",
-      "potřebuje čistší signál.",
-      "vyšší modulace je citlivější na chyby.",
-      "naopak zvyšuje kapacitu."
-    ]
+      "Nezvládnou TCP/IP.",
+      "To lze přidělit.",
+      "Nesouvisí.",
+      "Naopak malé."
+    ],
+    "explanation": "IoT zařízení potřebují gateway."
   },
   {
-    "category": "Infrastructure",
-    "question": "Která zařízení pracují na fyzické vrstvě?",
-    "answers": ["hub", "repeater", "router", "switch"],
-    "correct": [0, 1],
+    "category": "Úvod",
+    "question": "Jaký je problém bezdrátových sítí oproti kabelovým?",
+    "answers": [
+      "Vyšší interference",
+      "Nižší rychlost",
+      "Vyšší bezpečnost",
+      "Nižší latence"
+    ],
+    "correct": [
+      0,
+      1
+    ],
     "explanations": [
-      "pouze přeposílá signál bez logiky.",
-      "regeneruje signál na fyzické vrstvě.",
-      "pracuje na síťové vrstvě.",
-      "pracuje na linkové vrstvě."
-    ]
+      "Šum a rušení.",
+      "Typicky pomalejší.",
+      "Naopak nižší.",
+      "Mají vyšší latenci."
+    ],
+    "explanation": "Bezdrát má více omezení než kabel."
   },
   {
-    "category": "Infrastructure",
-    "question": "Která zařízení pracují na síťové vrstvě?",
-    "answers": ["router", "switch", "bridge", "firewall"],
-    "correct": [0],
+    "category": "Úvod",
+    "question": "Proč je bezdrátové médium sdílené?",
+    "answers": [
+      "Signál je dostupný všem v dosahu",
+      "Používá kabely",
+      "Je izolované",
+      "Má pevné hranice"
+    ],
+    "correct": [
+      0
+    ],
     "explanations": [
-      "směruje pakety podle IP adres.",
-      "pracuje primárně na L2.",
-      "je také L2 zařízení.",
-      "není čistě síťová vrstva, může být vícevrstvový."
-    ]
+      "Šíří se všemi směry.",
+      "To je wired.",
+      "Naopak sdílené.",
+      "Nemá."
+    ],
+    "explanation": "Signál je dostupný všem v oblasti."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Které tvrzení nejlépe vystihuje roli signálu v komunikačním systému z hlediska přenosu informací?",
+    "answers": [
+      "Signál je pouze fyzikální jev bez vztahu k přenášeným datům",
+      "Signál je časová funkce změn vlastností média nesoucí zakódovaná data",
+      "Signál je pouze digitální reprezentace dat bez fyzikální podstaty",
+      "Signál existuje pouze v bezdrátových sítích a ne v kabelových"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Signál vždy nese zakódovanou informaci v průběhu.",
+      "Definice signálu zahrnuje časovou změnu a kódování.",
+      "Signál má vždy fyzikální realizaci v médiu.",
+      "Signál existuje ve všech typech přenosových médií."
+    ],
+    "explanation": "Signál je fyzikální nosič informace reprezentovaný změnami média."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Jaké tři základní fyzikální vlastnosti charakterizují elektromagnetické vlnění při přenosu signálu?",
+    "answers": [
+      "Amplituda, fáze a výkon signálu",
+      "Vlnová délka, frekvence a rychlost šíření",
+      "Napětí, proud a odpor",
+      "Bitová rychlost, šířka pásma a latence"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To jsou parametry signálu, ne základní vlastnosti vlnění.",
+      "Tyto tři veličiny definují chování elektromagnetické vlny.",
+      "To jsou elektrické veličiny, ne vlastnosti vlnění.",
+      "To jsou síťové parametry, ne fyzikální vlastnosti."
+    ],
+    "explanation": "Elektromagnetické vlnění je popsáno délkou, frekvencí a rychlostí."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Co znamená kódování v kontextu přenosu dat a jaká je jeho hlavní funkce?",
+    "answers": [
+      "Zvětšení výkonu signálu pro delší dosah",
+      "Převod informace z jedné formy do jiné vhodné pro přenos",
+      "Zajištění bezpečnosti šifrováním dat",
+      "Zvýšení frekvence signálu pro rychlejší přenos"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Kódování nemění fyzikální výkon přenosu signálu.",
+      "Kódování umožňuje přizpůsobit data přenosovému médiu.",
+      "To je šifrování, ne základní význam kódování.",
+      "Kódování neznamená změnu frekvence přenosu signálu."
+    ],
+    "explanation": "Kódování transformuje data do vhodné přenosové reprezentace."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Jak nejpřesněji popsat elektromagnetický signál z hlediska jeho fyzikální podstaty a funkce?",
+    "answers": [
+      "Je to konstantní elektrické pole bez změn v čase",
+      "Je to časová změna elektrických a magnetických sil nesoucí data",
+      "Je to pouze digitální sled nul a jedniček",
+      "Je to šum vznikající v přenosovém médiu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Signál musí být proměnný, jinak nenese informaci.",
+      "Signál je změna EM pole, do které jsou data zakódována.",
+      "Digitální data musí být reprezentována fyzikálním signálem.",
+      "Šum je nežádoucí složka, ne signál."
+    ],
+    "explanation": "EM signál je fyzikální změna pole nesoucí zakódovaná data."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Jaký je vztah mezi daty a signály při přenosu v komunikační síti?",
+    "answers": [
+      "Data se přenášejí přímo bez potřeby signálu",
+      "Data se transformují na elektromagnetické signály pro přenos",
+      "Signály existují pouze pro analogová data",
+      "Signály a data jsou totéž"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Data musí být vždy reprezentována signálem pro přenos.",
+      "Signál je fyzikální reprezentace dat během přenosu.",
+      "Digitální data také využívají signál pro přenos.",
+      "Data jsou informace, signál je jejich nosič."
+    ],
+    "explanation": "Data musí být vždy zakódována do signálu pro přenos."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Které tvrzení správně popisuje vztah mezi analogovými a digitálními daty a signály?",
+    "answers": [
+      "Analogová data lze přenášet pouze analogovým signálem",
+      "Digitální data lze přenášet pouze digitálním signálem",
+      "Data i signály mohou být analogové i digitální",
+      "Signály jsou vždy digitální v bezdrátových sítích"
+    ],
+    "correct": [
+      2
+    ],
+    "explanations": [
+      "Analogová data lze přenášet i digitálním signálem.",
+      "Digitální data lze přenášet i analogovým signálem.",
+      "Každá kombinace dat a signálů je možná.",
+      "Bezdrát používá analogové elektromagnetické vlnění."
+    ],
+    "explanation": "Data i signály mohou existovat v analogové i digitální formě."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Co vyjadřuje decibel (dB) v kontextu přenosu dat a signálů?",
+    "answers": [
+      "Absolutní hodnotu výkonu signálu",
+      "Logaritmickou míru poměru výkonů dvou signálů",
+      "Frekvenci signálu v přenosovém médiu",
+      "Počet bitů přenesených za sekundu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "dB vyjadřuje poměr, ne absolutní hodnotu výkonu.",
+      "dB porovnává výkon signálů logaritmickým způsobem.",
+      "Frekvence se měří v Hz, ne v dB.",
+      "To je bitová rychlost, ne decibel."
+    ],
+    "explanation": "Decibel vyjadřuje logaritmický poměr výkonů signálů."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Jaký je význam poměru signálu k šumu (SNR) v přenosových systémech?",
+    "answers": [
+      "Určuje maximální možnou vzdálenost přenosu",
+      "Stanovuje horní mez dosažitelné přenosové rychlosti",
+      "Určuje typ použitého kabelu",
+      "Určuje počet připojených zařízení v síti"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "SNR ovlivňuje kvalitu, ne přímo maximální vzdálenost.",
+      "Vyšší SNR umožňuje vyšší maximální přenosovou rychlost.",
+      "Typ média není přímo určen hodnotou SNR.",
+      "SNR nesouvisí s počtem zařízení v síti."
+    ],
+    "explanation": "SNR přímo omezuje maximální dosažitelnou datovou rychlost."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Jaký vliv má šum na přenos dat při zvyšování přenosové rychlosti v komunikačním kanálu?",
+    "answers": [
+      "Šum nemá žádný vliv na chybovost při vyšších rychlostech",
+      "Při vyšší rychlosti roste pravděpodobnost zničení více bitů jedním rušením",
+      "Vyšší rychlost vždy snižuje bitovou chybovost BER",
+      "Šum ovlivňuje pouze analogové signály, ne digitální"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Šum ovlivňuje přenos více při vyšších rychlostech.",
+      "Rychlejší přenos znamená více bitů v kratším čase.",
+      "Vyšší rychlost obvykle zvyšuje chybovost přenosu.",
+      "Šum ovlivňuje všechny typy signálů bez rozdílu."
+    ],
+    "explanation": "Vyšší rychlost zvyšuje dopad šumu na více bitů."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Které tvrzení nejlépe vystihuje rozdíl mezi přepojováním okruhů a paketů z hlediska vlastností přenosu?",
+    "answers": [
+      "Přepojování okruhů negarantuje kvalitu přenosu",
+      "Přepojování paketů poskytuje vyhrazené pásmo pro komunikaci",
+      "Přepojování okruhů je méně flexibilní, ale garantuje parametry přenosu",
+      "Přepojování paketů je vhodné pouze pro hlasové služby"
+    ],
+    "correct": [
+      2
+    ],
+    "explanations": [
+      "Okruhy garantují kvalitu a vyhrazené zdroje přenosu.",
+      "Pakety sdílí kapacitu a nemají vyhrazené pásmo.",
+      "Okruhy poskytují stabilitu, ale nejsou flexibilní.",
+      "Pakety jsou vhodné hlavně pro datové přenosy."
+    ],
+    "explanation": "Okruhy garantují kvalitu, pakety jsou flexibilnější řešení."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Jaké vlastnosti charakterizují přepojování paketů oproti přepojování okruhů v moderních sítích?",
+    "answers": [
+      "Garantuje pevnou latenci a přenosovou rychlost",
+      "Efektivně využívá přenosovou kapacitu sdílením zdrojů",
+      "Vyžaduje rezervaci zdrojů před přenosem dat",
+      "Není používané v dnešním internetu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Pakety negarantují pevné parametry přenosu dat.",
+      "Kapacita se sdílí mezi více komunikujícími uzly.",
+      "To je vlastnost přepojování okruhů, ne paketů.",
+      "Internet je založený na přepojování paketů."
+    ],
+    "explanation": "Paketové sítě sdílí zdroje a jsou efektivnější."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Jaký je hlavní účel potvrzovacích zpráv ACK v komunikačních protokolech?",
+    "answers": [
+      "Zvýšit přenosovou rychlost signálu v síti",
+      "Informovat odesílatele, že zpráva byla úspěšně doručena",
+      "Zabránit šumu v přenosovém médiu",
+      "Změnit typ přenosového média během komunikace"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "ACK neslouží ke zvyšování rychlosti přenosu.",
+      "ACK potvrzuje správné přijetí zprávy příjemcem.",
+      "ACK neovlivňuje fyzikální vlastnosti přenosu.",
+      "ACK nemá vliv na použité médium přenosu."
+    ],
+    "explanation": "ACK slouží k potvrzení úspěšného doručení dat."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Jakou funkci plní timeout v mechanismech spolehlivého přenosu dat?",
+    "answers": [
+      "Omezuje maximální velikost přenášených dat",
+      "Určuje dobu čekání na potvrzení před opakováním přenosu",
+      "Zvyšuje šířku pásma přenosového média",
+      "Zabraňuje vzniku chyb v přenosu dat"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Timeout nesouvisí s velikostí datových jednotek.",
+      "Timeout spouští retransmisi při absenci potvrzení.",
+      "Timeout neovlivňuje fyzikální parametry přenosu.",
+      "Timeout pouze reaguje na chyby, ne jim předchází."
+    ],
+    "explanation": "Timeout určuje čekací dobu na ACK před retransmisí."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Jaký je princip fungování ARQ (Automatic Repeat reQuest) při řízení chyb v přenosu dat?",
+    "answers": [
+      "Používá pouze zvýšení výkonu signálu k odstranění chyb",
+      "Kombinuje potvrzení ACK a timeout pro opakovaný přenos dat",
+      "Odstraňuje potřebu jakékoliv zpětné komunikace",
+      "Používá pouze opravu chyb bez opakování přenosu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "ARQ pracuje s potvrzeními a retransmisemi dat.",
+      "ARQ využívá ACK a timeout pro spolehlivost přenosu.",
+      "ARQ vyžaduje zpětnou komunikaci mezi uzly.",
+      "To odpovídá FEC, ne ARQ metodě."
+    ],
+    "explanation": "ARQ zajišťuje spolehlivost pomocí retransmisí a potvrzení."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Jaký je vztah mezi šířkou pásma a maximální dosažitelnou přenosovou rychlostí v komunikačním systému?",
+    "answers": [
+      "Šířka pásma nemá vliv na přenosovou rychlost",
+      "Větší šířka pásma umožňuje vyšší přenosovou rychlost",
+      "Šířka pásma ovlivňuje pouze latenci, ne rychlost",
+      "Menší šířka pásma vždy zvyšuje kvalitu přenosu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Šířka pásma přímo ovlivňuje maximální rychlost přenosu.",
+      "Širší pásmo umožňuje přenášet více informací současně.",
+      "Ovlivňuje hlavně kapacitu a rychlost přenosu.",
+      "Menší pásmo omezuje množství přenášených dat."
+    ],
+    "explanation": "Šířka pásma určuje maximální možnou přenosovou kapacitu."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Které tvrzení nejlépe vystihuje význam Shannonovy věty v přenosu dat?",
+    "answers": [
+      "Udává maximální rychlost přenosu bez ohledu na šum",
+      "Stanovuje teoretické maximum přenosové rychlosti v kanálu se šumem",
+      "Platí pouze pro digitální signály bez výjimky",
+      "Zaručuje dosažení maximální rychlosti v praxi"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Shannonova věta zohledňuje šum v přenosovém kanálu.",
+      "Zohledňuje šířku pásma i poměr signálu k šumu.",
+      "Je obecná pro přenosové kanály bez omezení typu.",
+      "Udává teoretickou hranici, ne praktickou realizaci."
+    ],
+    "explanation": "Shannonova věta určuje limit rychlosti při přítomnosti šumu."
+  },
+  {
+    "category": "Základy prenosu dát",
+    "question": "Jaký je hlavní rozdíl mezi Nyquistovou a Shannonovou větou v oblasti přenosu dat?",
+    "answers": [
+      "Nyquistova věta počítá se šumem, Shannonova ne",
+      "Nyquistova věta platí pro ideální kanál bez šumu",
+      "Shannonova věta nepracuje s šířkou pásma",
+      "Obě věty popisují pouze analogové přenosy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Naopak Shannonova věta zahrnuje vliv šumu.",
+      "Nyquist řeší maximální rychlost bez vlivu šumu.",
+      "Šířka pásma je klíčový parametr Shannonovy věty.",
+      "Platí obecně pro přenos dat bez omezení."
+    ],
+    "explanation": "Nyquist bez šumu, Shannon zahrnuje vliv šumu."
+  },
+  {
+    "category": "NFC",
+    "question": "Jaký je hlavní vztah mezi NFC a RFID technologiemi z hlediska jejich fungování a standardizace?",
+    "answers": [
+      "NFC je zcela odlišná technologie bez návaznosti na RFID",
+      "NFC je podmnožina RFID a rozšiřuje ji o nové funkce",
+      "RFID je modernější verze NFC technologie",
+      "NFC funguje pouze na principu optického přenosu dat"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "NFC vychází z RFID a využívá stejné principy.",
+      "NFC přidává obousměrnou komunikaci a další funkce.",
+      "RFID je starší technologie, NFC z něj vychází.",
+      "NFC využívá elektromagnetické pole, ne optiku."
+    ],
+    "explanation": "NFC je rozšíření RFID s vyšší funkcionalitou komunikace."
+  },
+  {
+    "category": "NFC",
+    "question": "Jaký fyzikální princip je využíván při komunikaci NFC mezi dvěma zařízeními na krátkou vzdálenost?",
+    "answers": [
+      "Šíření elektromagnetické vlny do prostoru jako u Wi-Fi",
+      "Magnetická vazba mezi cívkami pomocí indukce v LC obvodu",
+      "Přenos signálu pomocí optického vlákna",
+      "Přímé elektrické propojení vodičem mezi zařízeními"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "NFC nepoužívá klasické šíření vln do prostoru.",
+      "NFC využívá magnetické pole a indukční vazbu.",
+      "Optické přenosy nejsou použity v NFC.",
+      "NFC je bezdrátová technologie bez vodičů."
+    ],
+    "explanation": "NFC funguje na principu indukce mezi dvěma cívkami."
+  },
+  {
+    "category": "NFC",
+    "question": "Jaký je typický pracovní dosah technologie NFC a jak ovlivňuje její použití v praxi?",
+    "answers": [
+      "Do několika kilometrů, vhodné pro mobilní sítě",
+      "Do několika metrů, podobné Wi-Fi sítím",
+      "Přibližně do 4 cm, vhodné pro bezpečné krátké interakce",
+      "Do stovek metrů, vhodné pro IoT senzory"
+    ],
+    "correct": [
+      2
+    ],
+    "explanations": [
+      "NFC má velmi krátký dosah, ne kilometry.",
+      "Dosah NFC je výrazně kratší než Wi-Fi.",
+      "Krátký dosah zvyšuje bezpečnost a přesnost interakce.",
+      "Takový dosah NFC nepodporuje."
+    ],
+    "explanation": "NFC má velmi krátký dosah, což zvyšuje bezpečnost."
+  },
+  {
+    "category": "NFC",
+    "question": "Které tvrzení správně popisuje rozdíl mezi NFC a UHF RFID z hlediska fyzikálního principu?",
+    "answers": [
+      "Obě technologie používají identický princip magnetické indukce",
+      "NFC používá indukci, zatímco UHF RFID elektromagnetické vlny",
+      "UHF RFID používá pouze optický přenos dat",
+      "NFC i UHF RFID využívají kabelové přenosy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "UHF RFID používá elektromagnetické vlny, ne indukci.",
+      "To je hlavní fyzikální rozdíl mezi technologiemi.",
+      "Optický přenos není použit v RFID.",
+      "Obě technologie jsou bezdrátové."
+    ],
+    "explanation": "NFC = indukce, UHF RFID = elektromagnetické vlny."
+  },
+  {
+    "category": "NFC",
+    "question": "Jaké jsou hlavní režimy fungování NFC a jak se liší jejich použití?",
+    "answers": [
+      "Reader/Writer, Card Emulation a Peer-to-Peer režimy",
+      "Pouze režim čtení dat bez možnosti zápisu",
+      "Pouze režim emulace karty bez interakce zařízení",
+      "Pouze režim peer-to-peer bez dalších variant"
+    ],
+    "correct": [
+      0
+    ],
+    "explanations": [
+      "Základní tři režimy NFC komunikace.",
+      "NFC podporuje i zápis a obousměrnou komunikaci.",
+      "Existují i další režimy komunikace.",
+      "NFC má více režimů použití."
+    ],
+    "explanation": "NFC má tři hlavní režimy podle typu komunikace."
+  },
+  {
+    "category": "NFC",
+    "question": "Jaký je rozdíl mezi HCE a Secure Element z hlediska bezpečnosti a implementace?",
+    "answers": [
+      "HCE ukládá klíče v dedikovaném čipu, SE v OS",
+      "HCE používá software v OS, SE využívá bezpečný hardware",
+      "Obě technologie ukládají klíče pouze v RAM paměti",
+      "SE je méně bezpečné než HCE řešení"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je to přesně opačně.",
+      "SE poskytuje vyšší úroveň zabezpečení dat.",
+      "SE ukládá klíče v chráněném čipu.",
+      "SE je považováno za bezpečnější variantu."
+    ],
+    "explanation": "HCE je softwarové, SE je hardwarově zabezpečené řešení."
+  },
+  {
+    "category": "NFC",
+    "question": "Jaké typy NFC tagů existují a jak se liší z hlediska standardů a použití?",
+    "answers": [
+      "Type 2, 3, 4 a 5 podle různých standardů ISO",
+      "Pouze jeden univerzální typ NFC tagu",
+      "Typy založené pouze na velikosti paměti",
+      "Typy určované pouze výrobcem zařízení"
+    ],
+    "correct": [
+      0
+    ],
+    "explanations": [
+      "Každý typ využívá jiný standard a vlastnosti.",
+      "Existuje více typů s různými vlastnostmi.",
+      "Rozdíl je i ve standardech a funkcích.",
+      "Typy jsou definovány standardy, ne výrobci."
+    ],
+    "explanation": "NFC tagy mají různé typy podle standardů a funkcí."
+  },
+  {
+    "category": "NFC",
+    "question": "Jaký je význam standardu ISO/IEC 14443 v kontextu NFC komunikace?",
+    "answers": [
+      "Definuje pouze aplikační vrstvu NFC komunikace",
+      "Specifikuje fyzickou i vyšší vrstvy komunikace NFC",
+      "Platí pouze pro optické přenosy dat",
+      "Používá se pouze pro Wi-Fi komunikaci"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Zahrnuje více vrstev než jen aplikační.",
+      "Definuje celý stack komunikace mezi zařízeními.",
+      "Standard se týká bezdrátové komunikace NFC.",
+      "ISO 14443 je určen pro NFC a smart karty."
+    ],
+    "explanation": "ISO 14443 definuje kompletní komunikační stack NFC."
+  },
+  {
+    "category": "NFC",
+    "question": "Jak probíhá typická komunikace mezi NFC čtečkou a kartou podle ISO 14443?",
+    "answers": [
+      "Zahájení přímým přenosem dat bez inicializace",
+      "Sekvence REQA, SELECT, RATS a následné APDU příkazy",
+      "Pouze jednorázové vyslání dat bez potvrzení",
+      "Pouze výměna IP paketů mezi zařízeními"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Komunikace vyžaduje inicializační kroky a handshake.",
+      "Tato sekvence reprezentuje standardní průběh komunikace.",
+      "Komunikace je řízená a vícefázová.",
+      "NFC nepoužívá IP protokol pro komunikaci."
+    ],
+    "explanation": "Komunikace probíhá přes inicializaci a APDU příkazy."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Placeholder otázka pre tému Řízení přístupu k bezdrátovému médiu.",
+    "answers": [
+      "Táto téma je pripravená",
+      "Táto téma ešte neexistuje",
+      "Vizualizácia je vypnutá",
+      "Quiz sa nedá spustiť"
+    ],
+    "correct": [
+      0
+    ],
+    "explanations": [
+      "Správne, téma je zatiaľ pripravená ako placeholder.",
+      "Nesprávne, téma už bola pridaná.",
+      "Nesprávne, štruktúra vizualizácie zostala zachovaná.",
+      "Nesprávne, quiz ostáva funkčný."
+    ],
+    "explanation": "Táto téma bola pridaná ako placeholder bez pôvodných otázok."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Placeholder otázka pre tému Wireless Wide Networks / Mobile Networks.",
+    "answers": [
+      "Táto téma je pripravená",
+      "Táto téma ešte neexistuje",
+      "Vizualizácia je vypnutá",
+      "Quiz sa nedá spustiť"
+    ],
+    "correct": [
+      0
+    ],
+    "explanations": [
+      "Správne, téma je zatiaľ pripravená ako placeholder.",
+      "Nesprávne, téma už bola pridaná.",
+      "Nesprávne, štruktúra vizualizácie zostala zachovaná.",
+      "Nesprávne, quiz ostáva funkčný."
+    ],
+    "explanation": "Táto téma bola pridaná ako placeholder bez pôvodných otázok."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Které tvrzení o bezdrátovém přenosu je nejpřesnější z hlediska fyzikální realizace signálu?",
+    "answers": [
+      "Bezdrátový přenos může být realizován čistě digitálně bez analogové reprezentace",
+      "Bezdrátový přenos využívá analogové elektromagnetické vlny, i pro digitální data",
+      "Digitální přenos je v bezdrátovém prostředí fyzikálně oddělený od analogového",
+      "Bezdrátové sítě nepoužívají elektromagnetické pole pro přenos"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Bezdrátový přenos vždy používá analogové elektromagnetické vlny.",
+      "Digitální data jsou vždy mapována na analogový signál.",
+      "Digitální data jsou vždy reprezentována analogovým signálem.",
+      "Přenos probíhá právě pomocí elektromagnetického pole."
+    ],
+    "explanation": "Digitální data jsou vždy přenášena pomocí analogového signálu."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Proč mají nízkofrekvenční rádiové vlny větší dosah než vysokofrekvenční?",
+    "answers": [
+      "Protože mají vyšší energii a menší ztráty",
+      "Protože mají delší vlnovou délku a lépe obcházejí překážky",
+      "Protože se šíří pouze v přímé viditelnosti",
+      "Protože nejsou ovlivněny šumem ani interferencí"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Energie není hlavní důvod většího dosahu.",
+      "Dlouhé vlny se lépe šíří kolem překážek.",
+      "Nízké frekvence nevyžadují přímou viditelnost.",
+      "Jsou naopak citlivé na různé zdroje rušení."
+    ],
+    "explanation": "Delší vlny se lépe šíří a mají větší dosah."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Které tvrzení o mikrovlnách je správné, ale zároveň může být zavádějící?",
+    "answers": [
+      "Mikrovlny mají vyšší kapacitu než rádiové vlny",
+      "Mikrovlny procházejí zdmi lépe než rádiové vlny",
+      "Mikrovlny nevyžadují přesné směrování antén",
+      "Mikrovlny nejsou ovlivněny počasím"
+    ],
+    "correct": [
+      0
+    ],
+    "explanations": [
+      "Je to pravda, ale za cenu vyšších nároků na prostředí.",
+      "Mikrovlny naopak špatně procházejí pevnými překážkami.",
+      "Vyžadují přesné nasměrování pro správný přenos.",
+      "Déšť a vlhkost mají významný vliv."
+    ],
+    "explanation": "Mikrovlny mají vysokou kapacitu, ale přísné podmínky."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Jaký je hlavní důsledek zvýšení frekvence signálu z pohledu šíření a ztrát?",
+    "answers": [
+      "Ztráty signálu se snižují a dosah roste",
+      "Ztráty signálu rostou a dosah se zmenšuje",
+      "Frekvence nemá vliv na ztráty signálu",
+      "Vyšší frekvence umožňuje šíření bez překážek"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Vyšší frekvence znamená větší útlum signálu.",
+      "Vyšší frekvence mají větší útlum a menší dosah.",
+      "Frekvence je klíčový faktor ovlivňující útlum.",
+      "Vyšší frekvence jsou citlivější na překážky."
+    ],
+    "explanation": "Vyšší frekvence znamená vyšší ztráty a kratší dosah."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Proč vícecestná interference může někdy paradoxně zlepšit kvalitu signálu?",
+    "answers": [
+      "Protože signály se vždy ruší navzájem",
+      "Protože více signálů může vytvořit zesílený výsledný signál",
+      "Protože se signál šíří pouze jednou cestou",
+      "Protože eliminuje šum z prostředí"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Interference může být i konstruktivní, nejen destruktivní.",
+      "Konstruktivní interference může zvýšit výsledný výkon.",
+      "Vícecestné šíření znamená více cest signálu.",
+      "Šum není tímto způsobem eliminován."
+    ],
+    "explanation": "Interference může být konstruktivní i destruktivní."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Které tvrzení o anténním zisku je správné, ale často špatně pochopené?",
+    "answers": [
+      "Vyšší zisk znamená větší výkon vysílače",
+      "Vyšší zisk znamená soustředění energie do užšího směru",
+      "Anténa se ziskem generuje novou energii",
+      "Zisk nemá vliv na dosah signálu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Zisk znamená směrování energie, ne její zvýšení.",
+      "Zisk znamená efektivnější směrové vyzařování energie.",
+      "Anténa nemůže vytvářet energii, jen ji směruje.",
+      "Zisk výrazně ovlivňuje efektivní dosah signálu."
+    ],
+    "explanation": "Zisk znamená koncentraci energie, ne její zvýšení."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Jaký je hlavní problém mezisymbolové interference při vysokých přenosových rychlostech?",
+    "answers": [
+      "Symboly jsou příliš dlouhé a zabírají více pásma",
+      "Symboly jsou krátké a překrývají se kvůli zpoždění",
+      "Symboly nejsou ovlivněny zpožděním signálu",
+      "ISI vzniká pouze v kabelových sítích"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Problém je spíše v jejich krátké délce.",
+      "Krátké symboly jsou náchylnější k překryvu.",
+      "Zpoždění je hlavní příčinou ISI.",
+      "ISI je typická pro bezdrátové prostředí."
+    ],
+    "explanation": "Krátké symboly se snadno překrývají při zpoždění."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Proč cyklický prefix pomáhá při eliminaci ISI v OFDM systémech?",
+    "answers": [
+      "Zvyšuje výkon signálu a eliminuje šum",
+      "Zajišťuje, že zpožděné signály neovlivní aktuální symbol",
+      "Zmenšuje šířku pásma signálu",
+      "Odstraňuje potřebu synchronizace"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Prefix neřeší výkon ani šum přímo.",
+      "Odděluje symboly a eliminuje jejich překryv.",
+      "Prefix spíše zvyšuje režii přenosu.",
+      "Synchronizace je stále nutná."
+    ],
+    "explanation": "Prefix odděluje symboly a eliminuje jejich překryv."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Jaký je hlavní důvod použití MIMO systémů v moderních bezdrátových sítích?",
+    "answers": [
+      "Snížení počtu antén v systému",
+      "Zvýšení kapacity bez zvýšení šířky pásma",
+      "Eliminace potřeby modulace signálu",
+      "Zvýšení latence přenosu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "MIMO naopak využívá více antén současně.",
+      "MIMO využívá prostorovou diversitu pro vyšší kapacitu.",
+      "Modulace je stále nutná pro přenos dat.",
+      "Cílem je zlepšení výkonu, ne latence."
+    ],
+    "explanation": "MIMO zvyšuje kapacitu bez potřeby většího pásma."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Jaký je hlavní rozdíl mezi vodičovými a bezdrátovými médii z hlediska přenosu elektromagnetické energie?",
+    "answers": [
+      "Vodičová média nepřenášejí elektromagnetickou energii vůbec",
+      "Bezdrátová média přenášejí energii šířením v prostoru, vodičová vedením",
+      "Bezdrátová média používají pouze digitální přenos dat",
+      "Vodičová média využívají pouze optické přenosy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "I vodiče přenášejí elektromagnetickou energii ve formě signálu.",
+      "Rozdíl je v tom, zda je médium fyzicky omezené.",
+      "Bezdrát používá analogový elektromagnetický přenos signálu.",
+      "Používají různé typy, nejen optické přenosy."
+    ],
+    "explanation": "Bezdrát šíří signál prostorem, vodič omezuje jeho tok."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Které části elektromagnetického spektra jsou běžně využívány pro přenos dat v bezdrátových sítích?",
+    "answers": [
+      "Viditelné světlo, UV a gama záření",
+      "Rádiové vlny a mikrovlny jako podmnožina spektra",
+      "Pouze infračervené záření",
+      "Pouze gama záření kvůli vysoké energii"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Tyto oblasti nejsou běžně použitelné pro datové přenosy.",
+      "Používají se kvůli vhodným vlastnostem šíření a dosahu.",
+      "Používá se omezeně, není hlavní médium.",
+      "Gama záření je nevhodné pro komunikaci."
+    ],
+    "explanation": "Rádiové a mikrovlnné pásmo je vhodné pro komunikaci."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Jaké vlastnosti mají rádiové vlny v nižších frekvenčních pásmech do 3 MHz?",
+    "answers": [
+      "Mají velmi krátký dosah a neprocházejí překážkami",
+      "Mají dlouhou vlnovou délku a mohou se šířit podél povrchu Země",
+      "Používají se pouze pro optické komunikace",
+      "Nejsou ovlivněny šumem ani interferencí"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Naopak mají velký dosah a procházejí překážkami.",
+      "Nízké frekvence umožňují šíření na velké vzdálenosti.",
+      "Používají se pro rádiové přenosy, ne optické.",
+      "Jsou citlivé na rušení z elektrických zdrojů."
+    ],
+    "explanation": "Nízké frekvence mají dlouhý dosah a velké vlnové délky."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Jak se liší šíření rádiových vln ve vyšších frekvencích (HF/VHF) oproti nižším frekvencím?",
+    "answers": [
+      "Vyšší frekvence se vždy šíří podél povrchu Země",
+      "HF se může odrážet od ionosféry, VHF se šíří přímočaře",
+      "Obě pásma se šíří pouze optickým způsobem",
+      "Vyšší frekvence mají vždy větší dosah než nižší"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Vyšší frekvence se šíří více přímočaře.",
+      "Rozdíl je v interakci s ionosférou a překážkami.",
+      "Nejde o optické šíření signálu.",
+      "Dosah závisí na prostředí a způsobu šíření."
+    ],
+    "explanation": "HF se odráží, VHF vyžaduje přímou viditelnost."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Jaký vliv má ionosféra na šíření rádiových vln v pásmu HF?",
+    "answers": [
+      "Nemá žádný vliv na šíření signálu",
+      "Odráží rádiové vlny a umožňuje komunikaci na velké vzdálenosti",
+      "Zcela absorbuje signál bez možnosti přenosu",
+      "Pouze zesiluje signál bez změny směru šíření"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Ionosféra zásadně ovlivňuje šíření rádiových vln.",
+      "Odrazy umožňují překonat zakřivení Země.",
+      "Signál se odráží nebo částečně prochází.",
+      "Dochází k odrazu, ne zesílení signálu."
+    ],
+    "explanation": "Ionosféra umožňuje odraz a dálkovou komunikaci."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Jaká je hlavní funkce antény v bezdrátovém komunikačním systému?",
+    "answers": [
+      "Ukládání dat během přenosu mezi zařízeními",
+      "Převod elektrické energie na elektromagnetické vlny a zpět",
+      "Zpracování dat na aplikační vrstvě",
+      "Zajištění šifrování komunikace"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Anténa neslouží pro ukládání dat.",
+      "Anténa funguje jako převodník mezi energiemi.",
+      "To je úloha vyšších vrstev systému.",
+      "Bezpečnost řeší jiné vrstvy systému."
+    ],
+    "explanation": "Anténa převádí mezi elektrickou a elektromagnetickou energií."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Jaký je rozdíl mezi všesměrovou a směrovou anténou z hlediska vyzařování signálu?",
+    "answers": [
+      "Všesměrová anténa vysílá pouze jedním směrem",
+      "Směrová anténa soustřeďuje energii do úzkého paprsku",
+      "Obě antény mají stejné vlastnosti vyzařování",
+      "Směrová anténa není použitelná pro komunikaci"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Všesměrová anténa vysílá do všech směrů.",
+      "Zvyšuje dosah a výkon v konkrétním směru.",
+      "Liší se výrazně směrovostí a využitím.",
+      "Používá se často pro dlouhé spoje."
+    ],
+    "explanation": "Směrové antény koncentrují energii do určitého směru."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Jaký vliv má vzdálenost a frekvence na útlum signálu podle Friisovy rovnice?",
+    "answers": [
+      "Útlum klesá se vzdáleností a frekvencí",
+      "Útlum roste kvadraticky se vzdáleností a vyšší frekvencí",
+      "Útlum je konstantní bez ohledu na podmínky",
+      "Útlum závisí pouze na typu antény"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Útlum roste s rostoucí vzdáleností a frekvencí.",
+      "Vyšší frekvence znamená větší ztráty při přenosu.",
+      "Závisí na více fyzikálních parametrech přenosu.",
+      "Závisí i na vzdálenosti a frekvenci."
+    ],
+    "explanation": "Ztráty rostou s vzdáleností i frekvencí přenosu."
+  },
+  {
+    "category": "Bezdrátový prenos dat",
+    "question": "Jaký je princip Dopplerova jevu v bezdrátových komunikacích při pohybu zařízení?",
+    "answers": [
+      "Změna amplitudy signálu bez vlivu na frekvenci",
+      "Změna frekvence signálu v závislosti na relativní rychlosti",
+      "Změna směru šíření signálu bez změny frekvence",
+      "Zvýšení výkonu signálu při pohybu zařízení"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Doppler ovlivňuje frekvenci, ne pouze amplitudu.",
+      "Relativní pohyb mění vnímanou frekvenci signálu.",
+      "Dochází primárně ke změně frekvence signálu.",
+      "Výkon signálu není Dopplerovým jevem ovlivněn."
+    ],
+    "explanation": "Doppler způsobuje změnu frekvence při relativním pohybu."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Placeholder otázka pre tému Wireless Mesh Networks (smerovanie).",
+    "answers": [
+      "Táto téma je pripravená",
+      "Táto téma ešte neexistuje",
+      "Vizualizácia je vypnutá",
+      "Quiz sa nedá spustiť"
+    ],
+    "correct": [
+      0
+    ],
+    "explanations": [
+      "Správne, téma je zatiaľ pripravená ako placeholder.",
+      "Nesprávne, téma už bola pridaná.",
+      "Nesprávne, štruktúra vizualizácie zostala zachovaná.",
+      "Nesprávne, quiz ostáva funkčný."
+    ],
+    "explanation": "Táto téma bola pridaná ako placeholder bez pôvodných otázok."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Placeholder otázka pre tému Wireless Sensor Networks (Zigbee, 802.15.4).",
+    "answers": [
+      "Táto téma je pripravená",
+      "Táto téma ešte neexistuje",
+      "Vizualizácia je vypnutá",
+      "Quiz sa nedá spustiť"
+    ],
+    "correct": [
+      0
+    ],
+    "explanations": [
+      "Správne, téma je zatiaľ pripravená ako placeholder.",
+      "Nesprávne, téma už bola pridaná.",
+      "Nesprávne, štruktúra vizualizácie zostala zachovaná.",
+      "Nesprávne, quiz ostáva funkčný."
+    ],
+    "explanation": "Táto téma bola pridaná ako placeholder bez pôvodných otázok."
+  },
+  {
+    "category": "Wireless Personal Area Networks (Bluetooth)",
+    "question": "Placeholder otázka pre tému Wireless Personal Area Networks (Bluetooth).",
+    "answers": [
+      "Táto téma je pripravená",
+      "Táto téma ešte neexistuje",
+      "Vizualizácia je vypnutá",
+      "Quiz sa nedá spustiť"
+    ],
+    "correct": [
+      0
+    ],
+    "explanations": [
+      "Správne, téma je zatiaľ pripravená ako placeholder.",
+      "Nesprávne, téma už bola pridaná.",
+      "Nesprávne, štruktúra vizualizácie zostala zachovaná.",
+      "Nesprávne, quiz ostáva funkčný."
+    ],
+    "explanation": "Táto téma bola pridaná ako placeholder bez pôvodných otázok."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Placeholder otázka pre tému Wireless Local Area Networks (Wi-Fi, 802.11).",
+    "answers": [
+      "Táto téma je pripravená",
+      "Táto téma ešte neexistuje",
+      "Vizualizácia je vypnutá",
+      "Quiz sa nedá spustiť"
+    ],
+    "correct": [
+      0
+    ],
+    "explanations": [
+      "Správne, téma je zatiaľ pripravená ako placeholder.",
+      "Nesprávne, téma už bola pridaná.",
+      "Nesprávne, štruktúra vizualizácie zostala zachovaná.",
+      "Nesprávne, quiz ostáva funkčný."
+    ],
+    "explanation": "Táto téma bola pridaná ako placeholder bez pôvodných otázok."
   }
 ]

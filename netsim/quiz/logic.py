@@ -28,6 +28,7 @@ class AnswerOption:
 class QuizQuestion:
     category: str
     prompt: str
+    explanation: str
     answers: tuple[str, ...]
     explanations: tuple[str, ...]
     correct: frozenset[int]
@@ -122,6 +123,7 @@ def randomize_question(question: QuizQuestion, rng: random.Random | None = None)
     return QuizQuestion(
         category=question.category,
         prompt=question.prompt,
+        explanation=question.explanation,
         answers=answers,
         explanations=explanations,
         correct=correct,

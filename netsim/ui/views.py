@@ -24,13 +24,9 @@ from netsim.ui.headers import pixel_text
 from netsim.ui.state import DIFFICULTY_MENU, MAIN_MENU, AppState, Screen
 
 
-MAX_LESSON_SUMMARY_LINES = max(len(lesson.description.splitlines()) for lesson in LESSONS)
-LESSONS_LIST_HEIGHT = len(LESSONS) + 4
-LESSONS_SUMMARY_HEIGHT = MAX_LESSON_SUMMARY_LINES + 3
-LESSONS_PERCENT_HEIGHT = 16
-LESSONS_MENU_TOTAL_HEIGHT = (
-    LESSONS_LIST_HEIGHT + LESSONS_SUMMARY_HEIGHT + LESSONS_PERCENT_HEIGHT
-)
+LESSONS_LIST_HEIGHT = len(LESSONS) + 6
+LESSONS_MENU_TOTAL_HEIGHT = LESSONS_LIST_HEIGHT + 7 + 14
+LESSONS_PERCENT_HEIGHT = LESSONS_MENU_TOTAL_HEIGHT - LESSONS_LIST_HEIGHT
 PERCENT_GLYPHS = {
     "1": [
         " ████",
@@ -351,16 +347,11 @@ def architecture_sidebar(state: AppState) -> Group:
 
 
 def lessons_sidebar(state: AppState) -> Group:
-    lesson = state.current_lesson()
     lines = Text()
     for index, item in enumerate(LESSONS):
         style = "#04101b on #8fe0ff bold" if index == state.lesson_index else "#d8efff"
         prefix = ">" if index == state.lesson_index else " "
         lines.append(f"{prefix} {item.title}\n", style=style)
-    summary_lines = lesson.description.upper().splitlines()
-    padded_summary = "\n".join(
-        summary_lines + ([""] * (MAX_LESSON_SUMMARY_LINES - len(summary_lines)))
-    )
     return Group(
         Panel(
             lines,
@@ -369,14 +360,7 @@ def lessons_sidebar(state: AppState) -> Group:
             padding=(1, 1),
             height=LESSONS_LIST_HEIGHT,
         ),
-        Panel(
-            Text(padded_summary, style="#d8efff"),
-            title="SUMMARY",
-            border_style="#53b4ff",
-            padding=(1, 1),
-            height=LESSONS_SUMMARY_HEIGHT,
-        ),
-        render_percentage_badge(0),
+        render_percentage_badge(state.lesson_best_score()),
     )
 
 
@@ -469,7 +453,6 @@ def lesson_quiz_panel(state: AppState) -> RenderableType:
         return stacked_quiz_windows(Text("QUIZ COMPLETE.", style="#d8efff"), Text(""))
 
     prompt = Text()
-    prompt.append(f"{question.category.upper()}\n", style="#8fe0ff bold")
     prompt.append(f"{question.prompt.upper()}\n\n", style="#d8efff bold")
 
     for index, answer in enumerate(question.answers):
@@ -497,7 +480,7 @@ def lesson_quiz_panel(state: AppState) -> RenderableType:
         submit_index = len(question.answers)
         style = "#04101b on #8fe0ff bold" if state.quiz_answer_index == submit_index else "#8fe0ff bold"
         prefix = ">" if state.quiz_answer_index == submit_index else " "
-        prompt.append(f"\n{prefix} SUBMIT\n", style=style)
+        prompt.append(f"{prefix} SUBMIT\n", style=style)
 
     if state.quiz_feedback_visible and result:
         prompt.append("\n")
@@ -510,16 +493,18 @@ def lesson_quiz_panel(state: AppState) -> RenderableType:
         prompt.append("\nPRESS ENTER TO CONTINUE.")
     else:
         prompt.append("\n")
-        prompt.append(f"QUESTION: {session.completed + 1}/{session.total}\n")
-        prompt.append(f"SCORE: {session.score}/{session.completed}\n\n")
-        prompt.append("SELECT ONE OR MORE ANSWERS.\n")
-        prompt.append("SPACE OR 1-4 TOGGLES.\n")
-        prompt.append("ENTER SELECTS OR SUBMITS.")
+        prompt.append(
+            f"QUESTION: {session.completed + 1}/{session.total}   SCORE: {session.score}/{session.completed}\n",
+            style="#8fe0ff bold",
+        )
+        prompt.append("SPACE TOGGLES, ENTER SUBMITS.")
 
     explanations = Text()
     submitted = state.quiz_feedback_visible and result
     if submitted:
         explanations.append("EXPLANATIONS\n\n", style="#8fe0ff bold")
+        if question.explanation:
+            explanations.append(f"{question.explanation}\n\n", style="#d8efff bold")
         for index, answer in enumerate(question.answers):
             correct = index in question.correct
             style = "#57d18a bold" if correct else "#f08a8a bold"
@@ -662,7 +647,7 @@ def quiz_detail_content(state: AppState) -> RenderableType:
     top = Columns(
         [
             Panel(
-                Text(f"{question.category.upper()}\n\n{question.prompt.upper()}", style="#d8efff bold"),
+                Text(question.prompt.upper(), style="#d8efff bold"),
                 title="PROMPT",
                 border_style="#53b4ff",
                 padding=(1, 2),

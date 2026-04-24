@@ -38,16 +38,16 @@ MAIN_MENU = (
 )
 
 LESSON_QUIZ_CATEGORIES: dict[str, tuple[str, ...]] = {
-    "intro_wireless": ("Transmission Basics", "Wireless"),
-    "types_topologies": ("Infrastructure", "Wireless"),
-    "radio_signal_basics": ("Transmission Basics", "Signals", "Nyquist", "Shannon", "Modulation"),
-    "wireless_propagation": ("Signals", "Transmission Basics", "Wireless"),
-    "medium_access_control": ("MAC", "Wireless"),
-    "mesh_routing": ("Wireless", "Infrastructure"),
-    "wsn_iot": ("Wireless", "Infrastructure"),
-    "short_range": ("Wireless", "Mobile Networks"),
-    "wifi_networks": ("Wireless", "MAC"),
-    "mobile_networks": ("Mobile Networks", "Wireless"),
+    "intro_wireless": ("Úvod",),
+    "types_topologies": ("Základy prenosu dát",),
+    "radio_signal_basics": ("NFC",),
+    "wireless_propagation": ("Bezdrátový prenos dat",),
+    "medium_access_control": ("Řízení přístupu k bezdrátovému médiu",),
+    "mesh_routing": ("Wireless Wide Networks / Mobile Networks",),
+    "wsn_iot": ("Wireless Mesh Networks (smerovanie)",),
+    "short_range": ("Wireless Sensor Networks (Zigbee, 802.15.4)",),
+    "wifi_networks": ("Wireless Personal Area Networks (Bluetooth)",),
+    "mobile_networks": ("Wireless Local Area Networks (Wi-Fi, 802.11)",),
 }
 
 DIFFICULTY_MENU: tuple[tuple[str, Difficulty | None], ...] = (
@@ -130,7 +130,7 @@ class AppState:
 
     def quiz_best_key(self) -> str:
         if self.screen == Screen.LESSON_DETAIL:
-            return f"lesson:{self.current_lesson().key}"
+            return self.lesson_best_key()
         category = self.selected_quiz_category() or "random_mix"
         difficulty = self.selected_quiz_difficulty()
         difficulty_key = difficulty.value if difficulty else "all"
@@ -138,6 +138,12 @@ class AppState:
 
     def quiz_best_score(self) -> int:
         return self.best_scores.get(self.quiz_best_key(), 0)
+
+    def lesson_best_key(self) -> str:
+        return f"lesson:{self.current_lesson().key}"
+
+    def lesson_best_score(self) -> int:
+        return self.best_scores.get(self.lesson_best_key(), 0)
 
     def banner_key(self) -> str:
         if self.screen == Screen.HOME:
