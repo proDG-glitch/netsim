@@ -930,43 +930,643 @@
   },
   {
     "category": "Řízení přístupu k bezdrátovému médiu",
-    "question": "Placeholder otázka pre tému Řízení přístupu k bezdrátovému médiu.",
+    "question": "Jaký je hlavní cíl protokolů MAC v bezdrátových sítích?",
     "answers": [
-      "Táto téma je pripravená",
-      "Táto téma ešte neexistuje",
-      "Vizualizácia je vypnutá",
-      "Quiz sa nedá spustiť"
+      "Zvýšit výkon fyzické vrstvy bez ohledu na kolize",
+      "Koordinovat přístup více stanic a minimalizovat kolize",
+      "Zajistit šifrování přenosu dat mezi zařízeními",
+      "Zvýšit frekvenci signálu pro lepší dosah"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "MAC řeší přístup k médiu, ne fyzickou vrstvu.",
+      "MAC zajišťuje efektivní sdílení média mezi uzly.",
+      "Šifrování řeší vyšší vrstvy, ne MAC.",
+      "Frekvence je záležitost fyzické vrstvy."
+    ],
+    "explanation": "MAC řídí přístup ke sdílenému médiu mezi stanicemi."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Které tvrzení nejlépe vystihuje rozdíl mezi contention a controlled access protokoly?",
+    "answers": [
+      "Oba typy eliminují kolize úplně",
+      "Contention protokoly dovolují kolize, controlled je eliminují řízením",
+      "Controlled přístup je vždy pomalejší než contention",
+      "Contention přístup používá pouze centrální řízení"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Contention protokoly kolize připouštějí.",
+      "Rozdíl je v přístupu ke kolizím a řízení.",
+      "Záleží na konkrétní implementaci.",
+      "Naopak nemá centrální řízení."
+    ],
+    "explanation": "Contention = náhodný přístup, controlled = řízený přístup."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Proč je Slotted ALOHA efektivnější než čistá ALOHA?",
+    "answers": [
+      "Používá vyšší frekvenci přenosu dat",
+      "Omezuje začátky vysílání na časové sloty",
+      "Zcela eliminuje kolize mezi stanicemi",
+      "Používá řízený přístup místo náhodného"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Efektivita nesouvisí s frekvencí přenosu.",
+      "Tím se snižuje pravděpodobnost kolizí.",
+      "Kolize stále existují, jen méně často.",
+      "Stále jde o náhodný přístup."
+    ],
+    "explanation": "Sloty snižují kolize a zvyšují efektivitu."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Proč samotné CSMA nedokáže eliminovat kolize v síti?",
+    "answers": [
+      "Protože stanice nikdy neposlouchají médium",
+      "Kvůli nenulové době šíření signálu médiem",
+      "Protože nepoužívá digitální signály",
+      "Protože vždy vysílá bez ohledu na stav média"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "CSMA právě médium poslouchá.",
+      "Stanice nemusí vidět vysílání jiných včas.",
+      "To nesouvisí s kolizemi.",
+      "CSMA vysílá jen při volném médiu."
+    ],
+    "explanation": "Zpoždění šíření způsobuje kolize i při poslechu."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Proč nelze použít CSMA/CD v bezdrátových sítích?",
+    "answers": [
+      "Protože bezdrátové sítě nemají kolize",
+      "Protože zařízení nemohou současně vysílat a přijímat",
+      "Protože signál je vždy digitální",
+      "Protože používá příliš vysoké frekvence"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Kolize existují i v bezdrátových sítích.",
+      "Nelze detekovat kolizi během vysílání.",
+      "To není důvod nemožnosti použití.",
+      "Frekvence není důvod."
+    ],
+    "explanation": "Bezdrát neumí detekovat kolizi při vysílání."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Jaký je hlavní princip CSMA/CA oproti CSMA/CD?",
+    "answers": [
+      "Detekce kolizí po jejich vzniku",
+      "Snahy o vyhnutí se kolizím před vysíláním",
+      "Ignorování kolizí během přenosu",
+      "Použití pouze řízeného přístupu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To je princip CSMA/CD.",
+      "Používá backoff a čekání pro prevenci kolizí.",
+      "Kolize se řeší opakováním přenosu.",
+      "Stále jde o náhodný přístup."
+    ],
+    "explanation": "CSMA/CA se snaží kolizím předcházet."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Který problém řeší protokol RTS/CTS v bezdrátových sítích?",
+    "answers": [
+      "Zvýšení šířky pásma přenosu",
+      "Problém skrytých terminálů",
+      "Zvýšení výkonu vysílače",
+      "Odstranění šumu v kanálu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "RTS/CTS neovlivňuje šířku pásma.",
+      "Pomáhá koordinovat vysílání skrytých uzlů.",
+      "Nesouvisí s výkonem zařízení.",
+      "Šum neřeší tento protokol."
+    ],
+    "explanation": "RTS/CTS řeší hidden node problém."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Proč je kolize RTS rámců považována za přijatelnou?",
+    "answers": [
+      "Protože RTS rámce jsou krátké",
+      "Protože RTS rámce nelze ztratit",
+      "Protože RTS obsahuje pouze adresy",
+      "Protože RTS se neposílá bezdrátově"
     ],
     "correct": [
       0
     ],
     "explanations": [
-      "Správne, téma je zatiaľ pripravená ako placeholder.",
-      "Nesprávne, téma už bola pridaná.",
-      "Nesprávne, štruktúra vizualizácie zostala zachovaná.",
-      "Nesprávne, quiz ostáva funkčný."
+      "Ztráta je malá oproti kolizi velkých dat.",
+      "RTS může kolidovat stejně jako data.",
+      "To není důvod akceptace kolizí.",
+      "RTS je bezdrátový signál."
     ],
-    "explanation": "Táto téma bola pridaná ako placeholder bez pôvodných otázok."
+    "explanation": "Krátké rámce znamenají menší ztrátu při kolizi."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Jak vzniká problém skrytého terminálu?",
+    "answers": [
+      "Stanice se navzájem slyší, ale ignorují se",
+      "Stanice nevidí vysílání jiných a vysílají současně",
+      "Stanice mají příliš vysoký výkon vysílače",
+      "Stanice používají různé frekvence"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Problém je právě v tom, že se neslyší.",
+      "To vede ke kolizi u přijímače.",
+      "To není hlavní příčina problému.",
+      "Problém vzniká i na stejné frekvenci."
+    ],
+    "explanation": "Skryté uzly nevidí své vysílání navzájem."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Které tvrzení o exposed terminal problému je správné?",
+    "answers": [
+      "Stanice zbytečně nevysílá, i když by mohla",
+      "Stanice vysílá současně a vždy způsobí kolizi",
+      "Stanice nikdy nečeká na médium",
+      "Problém se týká pouze kabelových sítí"
+    ],
+    "correct": [
+      0
+    ],
+    "explanations": [
+      "CSMA ji omezuje kvůli falešné kolizi.",
+      "Naopak kolize by nenastala.",
+      "CSMA vždy kontroluje médium.",
+      "Je typický pro bezdrátové prostředí."
+    ],
+    "explanation": "Stanice zbytečně čeká kvůli falešnému konfliktu."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Jaký je hlavní princip FDMA?",
+    "answers": [
+      "Uživatelé se střídají v čase",
+      "Každý uživatel má vlastní frekvenční pásmo",
+      "Uživatelé používají unikátní kódy",
+      "Uživatelé sdílí pásmo náhodně"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To je princip TDMA.",
+      "Frekvence jsou rozděleny mezi uživatele.",
+      "To je princip CDMA.",
+      "To je random access přístup."
+    ],
+    "explanation": "FDMA dělí médium podle frekvence."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Jaký je hlavní rozdíl mezi TDMA a OFDMA?",
+    "answers": [
+      "TDMA používá frekvence, OFDMA čas",
+      "OFDMA přiděluje zdroje v čase i frekvenci",
+      "TDMA je dynamické, OFDMA statické",
+      "OFDMA nepodporuje více uživatelů"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "TDMA používá čas, OFDMA čas i frekvence.",
+      "TDMA jen časově, OFDMA i frekvenčně.",
+      "OFDMA je flexibilnější než TDMA.",
+      "OFDMA je navrženo pro více uživatelů."
+    ],
+    "explanation": "OFDMA rozděluje zdroje v obou doménách."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Proč je OFDMA vhodné pro moderní mobilní sítě?",
+    "answers": [
+      "Protože nepodporuje více uživatelů",
+      "Protože umožňuje dynamické přidělování zdrojů",
+      "Protože eliminuje potřebu plánování",
+      "Protože používá pouze jednu frekvenci"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Naopak podporuje více uživatelů současně.",
+      "Flexibilně reaguje na požadavky uživatelů.",
+      "Plánování je stále nutné.",
+      "Používá více subcarrierů."
+    ],
+    "explanation": "OFDMA dynamicky přiděluje zdroje podle potřeby."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Jaký je hlavní problém CDMA označovaný jako near-far problem?",
+    "answers": [
+      "Slabé signály ruší silné signály",
+      "Silné signály mohou přehlušit slabé signály",
+      "Signály nelze dekódovat kvůli šumu",
+      "Uživatelé nemají unikátní kódy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Naopak silné signály potlačují slabé.",
+      "Je nutné řízení výkonu.",
+      "Problém je v rozdílu výkonů.",
+      "Každý uživatel má unikátní kód."
+    ],
+    "explanation": "Silné signály potlačují slabé bez řízení výkonu."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Jaký je hlavní princip NOMA v 5G sítích?",
+    "answers": [
+      "Uživatelé se střídají v čase",
+      "Uživatelé sdílí pásmo současně a liší se výkonem",
+      "Každý uživatel má vlastní frekvenci",
+      "Používá pouze kódování jako CDMA"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To je princip TDMA.",
+      "Oddělení probíhá pomocí výkonu a SIC.",
+      "To je FDMA.",
+      "Používá jiný princip než CDMA."
+    ],
+    "explanation": "NOMA využívá rozdíly výkonu pro oddělení uživatelů."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Proč CSMA/CA používá náhodný backoff i v případě, že médium je volné?",
+    "answers": [
+      "Protože médium nemusí být skutečně volné kvůli šumu",
+      "Aby se snížila pravděpodobnost kolize mezi více stanicemi čekajícími na vysílání",
+      "Protože zařízení neumí vysílat ihned po uvolnění média",
+      "Protože je to požadavek fyzické vrstvy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Šum není hlavní důvod použití backoff mechanizmu.",
+      "Více stanic může začít vysílat současně bez backoffu.",
+      "Zařízení mohou vysílat, ale čekání je záměrné.",
+      "Backoff je mechanismus MAC vrstvy, ne fyzické."
+    ],
+    "explanation": "Backoff snižuje pravděpodobnost současného vysílání více stanic."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Proč RTS/CTS neřeší všechny kolize v bezdrátových sítích?",
+    "answers": [
+      "Protože RTS/CTS eliminuje pouze kolize datových rámců",
+      "Protože RTS/CTS nefunguje v přítomnosti šumu",
+      "Protože CTS rámce nejsou potvrzovány",
+      "Protože RTS/CTS je pouze pro kabelové sítě"
+    ],
+    "correct": [
+      0
+    ],
+    "explanations": [
+      "RTS rámce se mohou stále navzájem srazit.",
+      "Šum ovlivňuje vše, ale není hlavní problém.",
+      "CTS je odpověď, ne problém kolizí.",
+      "Používá se právě v bezdrátových sítích."
+    ],
+    "explanation": "RTS kolize jsou možné, ale méně nákladné."
+  },
+  {
+    "category": "Řízení přístupu k bezdrátovému médiu",
+    "question": "Proč není možné spolehlivě detekovat kolizi v bezdrátové síti během vysílání?",
+    "answers": [
+      "Protože zařízení nevysílají současně",
+      "Protože vysílaný signál je mnohem silnější než přijímaný",
+      "Protože bezdrátové sítě nepoužívají signály",
+      "Protože kolize neexistují v bezdrátovém prostředí"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Zařízení mohou vysílat současně a kolidovat.",
+      "Zařízení nedokáže rozlišit slabý kolidující signál.",
+      "Používají elektromagnetické signály pro přenos.",
+      "Kolize existují, jen se nedetekují přímo."
+    ],
+    "explanation": "Vysílaný signál přehluší případný kolidující signál."
   },
   {
     "category": "Wireless Wide Networks / Mobile Networks",
-    "question": "Placeholder otázka pre tému Wireless Wide Networks / Mobile Networks.",
+    "question": "Jaký je hlavní princip buněčných sítí z hlediska efektivního využití frekvenčního spektra?",
     "answers": [
-      "Táto téma je pripravená",
-      "Táto téma ešte neexistuje",
-      "Vizualizácia je vypnutá",
-      "Quiz sa nedá spustiť"
+      "Každá buňka používá unikátní frekvenci bez opakování",
+      "Frekvence se opakují v různých buňkách díky omezenému dosahu",
+      "Všechny buňky sdílí jednu frekvenci současně",
+      "Používá se pouze časové multiplexování"
     ],
     "correct": [
-      0
+      1
     ],
     "explanations": [
-      "Správne, téma je zatiaľ pripravená ako placeholder.",
-      "Nesprávne, téma už bola pridaná.",
-      "Nesprávne, štruktúra vizualizácie zostala zachovaná.",
-      "Nesprávne, quiz ostáva funkčný."
+      "Frekvence se opakují v nesousedních buňkách.",
+      "Reuse frekvencí zvyšuje efektivitu spektra.",
+      "To by způsobilo masivní interferenci.",
+      "Používá se i prostorové multiplexování."
     ],
-    "explanation": "Táto téma bola pridaná ako placeholder bez pôvodných otázok."
+    "explanation": "Reuse frekvencí je základ buněčných sítí."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Proč se používá hexagonální model buněk v mobilních sítích?",
+    "answers": [
+      "Protože přesně odpovídá reálnému šíření signálu",
+      "Protože umožňuje efektivní pokrytí bez mezer",
+      "Protože minimalizuje počet uživatelů v síti",
+      "Protože zvyšuje výkon vysílače"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je to pouze zjednodušený model.",
+      "Hexagon pokrývá plochu bez překryvů.",
+      "Nemá vliv na počet uživatelů.",
+      "Model neovlivňuje výkon zařízení."
+    ],
+    "explanation": "Hexagon umožňuje efektivní pokrytí prostoru."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Jaký je hlavní rozdíl mezi 1G a 2G mobilními sítěmi?",
+    "answers": [
+      "1G je digitální, 2G analogová",
+      "1G analogová, 2G digitální komunikace",
+      "1G podporuje SMS, 2G ne",
+      "1G má vyšší rychlost než 2G"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je to naopak.",
+      "2G přinesla digitalizaci a lepší služby.",
+      "SMS přišla až s 2G.",
+      "2G přinesla vyšší rychlosti."
+    ],
+    "explanation": "2G přechází z analogu na digitál."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Proč byl GPRS zásadní krok ve vývoji mobilních sítí?",
+    "answers": [
+      "Zavedl optické přenosy dat",
+      "Přinesl paketový přenos dat vedle hlasu",
+      "Zavedl první mobilní video hovory",
+      "Eliminoval potřebu základnových stanic"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "GPRS pracuje v rádiové síti.",
+      "Data už nebyla jen okruhově přepínaná.",
+      "To přišlo až s 3G.",
+      "Základny jsou stále nutné."
+    ],
+    "explanation": "GPRS přinesl packet switching do mobilních sítí."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Jaký byl hlavní přínos 3G sítí oproti 2G?",
+    "answers": [
+      "Pouze vyšší hlasová kvalita",
+      "Multimédia a vyšší datové rychlosti",
+      "Pouze snížení latence",
+      "Odstranění základnových stanic"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Přinesla i multimediální služby.",
+      "3G umožnila internet a video služby.",
+      "To není hlavní přínos 3G.",
+      "Architektura zůstává podobná."
+    ],
+    "explanation": "3G přinesla mobilní internet a multimédia."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Proč je LTE považováno za plně IP síť?",
+    "answers": [
+      "Protože používá pouze analogový přenos",
+      "Protože všechny služby včetně hlasu běží přes IP",
+      "Protože nepoužívá paketový přenos",
+      "Protože eliminuje potřebu internetu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Používá digitální IP komunikaci.",
+      "Hlas je realizován jako VoIP.",
+      "LTE je plně paketová síť.",
+      "Naopak je na něm založená."
+    ],
+    "explanation": "LTE sjednocuje služby na IP platformě."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Jaká je hlavní funkce MME v LTE síti?",
+    "answers": [
+      "Přenos uživatelských dat mezi buňkami",
+      "Řízení mobility a signalizace uživatelů",
+      "Ukládání multimediálního obsahu",
+      "Šifrování dat v aplikaci"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To řeší jiné komponenty.",
+      "MME spravuje stavy a pohyb uživatelů.",
+      "To není role MME.",
+      "To řeší jiné vrstvy."
+    ],
+    "explanation": "MME je klíčový pro signalizaci a mobilitu."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Jaký je hlavní rozdíl mezi 4G a 5G architekturou?",
+    "answers": [
+      "4G je analogová, 5G digitální",
+      "5G používá service-based architekturu a API komunikaci",
+      "4G nepoužívá IP",
+      "5G nepodporuje mobilitu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Obě jsou digitální.",
+      "5G je cloud-native a API-based.",
+      "4G je plně IP síť.",
+      "Mobilita je klíčová vlastnost."
+    ],
+    "explanation": "5G přechází na API a cloud architekturu."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Co znamená CUPS v 5G architektuře?",
+    "answers": [
+      "Oddělení uživatelů podle služeb",
+      "Oddělení control plane a user plane",
+      "Komprese datového toku",
+      "Sdílení frekvenčního spektra"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To souvisí spíše se slicingem.",
+      "Zlepšuje flexibilitu a škálování.",
+      "Nesouvisí s kompresí.",
+      "To je jiný koncept."
+    ],
+    "explanation": "CUPS odděluje řízení a data."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Jaký je hlavní princip network slicing v 5G?",
+    "answers": [
+      "Rozdělení frekvence mezi uživatele",
+      "Vytváření virtuálních sítí pro různé služby",
+      "Zvýšení výkonu vysílače",
+      "Zmenšení latence fyzické vrstvy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To je FDMA.",
+      "Každý slice slouží jinému účelu.",
+      "To není princip slicing.",
+      "Slicing je architektonický koncept."
+    ],
+    "explanation": "Slicing umožňuje virtualizované sítě pro různé use-cases."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Jaký je hlavní rozdíl v signalizaci mezi 4G a 5G?",
+    "answers": [
+      "4G používá HTTP, 5G Diameter",
+      "5G používá HTTP/2 a REST API místo Diameter",
+      "Obě používají stejné protokoly",
+      "5G nepoužívá žádnou signalizaci"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je to naopak.",
+      "Moderní API-based komunikace.",
+      "5G přináší zásadní změnu.",
+      "Signalizace je klíčová."
+    ],
+    "explanation": "5G přechází na HTTP/2 a REST."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Jaký je hlavní účel Northbound API v SDN?",
+    "answers": [
+      "Komunikace mezi hardwarem a přepínači",
+      "Komunikace mezi aplikacemi a SDN kontrolerem",
+      "Přenos dat mezi uživateli",
+      "Řízení fyzické vrstvy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To je southbound API.",
+      "Umožňuje řízení sítě aplikacemi.",
+      "To není role API.",
+      "To není jeho úloha."
+    ],
+    "explanation": "Northbound API spojuje aplikace s kontrolerem."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Jaký je hlavní účel Southbound API?",
+    "answers": [
+      "Komunikace mezi aplikacemi",
+      "Komunikace mezi kontrolerem a síťovými prvky",
+      "Šifrování komunikace",
+      "Zvyšování rychlosti přenosu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To je northbound API.",
+      "Slouží k řízení infrastruktury.",
+      "To není jeho hlavní účel.",
+      "To není jeho role."
+    ],
+    "explanation": "Southbound API řídí síťové zařízení."
+  },
+  {
+    "category": "Wireless Wide Networks / Mobile Networks",
+    "question": "Proč je 5G označováno jako cloud-native architektura?",
+    "answers": [
+      "Protože běží pouze v cloudu",
+      "Protože využívá virtualizaci, API a mikroslužby",
+      "Protože nepoužívá hardware",
+      "Protože eliminuje síťovou infrastrukturu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Může běžet i lokálně.",
+      "Architektura je flexibilní a modulární.",
+      "Hardware je stále nutný.",
+      "Infrastruktura stále existuje."
+    ],
+    "explanation": "5G využívá moderní cloud principy."
   },
   {
     "category": "Bezdrátový prenos dat",
@@ -1330,82 +1930,1162 @@
   },
   {
     "category": "Wireless Mesh Networks (smerovanie)",
-    "question": "Placeholder otázka pre tému Wireless Mesh Networks (smerovanie).",
+    "question": "Jaký je základní princip multi-hop sítě?",
     "answers": [
-      "Táto téma je pripravená",
-      "Táto téma ešte neexistuje",
-      "Vizualizácia je vypnutá",
-      "Quiz sa nedá spustiť"
+      "Uzly komunikují přímo bez mezilehlých zařízení",
+      "Uzly si předávají data přes jiné uzly v síti",
+      "Komunikace probíhá pouze přes centrální server",
+      "Používá pouze kabelové spojení"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Používají se mezilehlé uzly pro přenos.",
+      "Multi-hop využívá přeposílání paketů uzly.",
+      "Multi-hop je decentralizovaný.",
+      "Jedná se o bezdrátové sítě."
+    ],
+    "explanation": "Multi-hop znamená přenos přes více uzlů."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Jaký je hlavní rozdíl mezi WMN a ad hoc sítí?",
+    "answers": [
+      "WMN používá pouze kabelové spojení",
+      "WMN má specializované směrovače, ad hoc ne",
+      "Ad hoc má centrální řízení",
+      "WMN nepoužívá routing"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Obě jsou bezdrátové.",
+      "Ad hoc uzly řeší routing samy.",
+      "Ad hoc je decentralizovaná síť.",
+      "Routing je klíčová část WMN."
+    ],
+    "explanation": "WMN má infrastrukturu, ad hoc ne."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Proč jsou ad hoc sítě náročné na směrování?",
+    "answers": [
+      "Mají stabilní topologii",
+      "Uzly jsou mobilní a topologie se mění",
+      "Používají pouze kabelové spojení",
+      "Nemají žádnou komunikaci mezi uzly"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Topologie je dynamická.",
+      "To komplikuje routing.",
+      "Jsou bezdrátové.",
+      "Komunikace je klíčová."
+    ],
+    "explanation": "Dynamická topologie komplikuje routing."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Jaký je hlavní rozdíl mezi proaktivními a reaktivními protokoly?",
+    "answers": [
+      "Proaktivní hledají cestu až při potřebě",
+      "Reaktivní mají vždy aktuální tabulky",
+      "Proaktivní udržují tabulky, reaktivní hledají cestu na požádání",
+      "Oba fungují stejně"
+    ],
+    "correct": [
+      2
+    ],
+    "explanations": [
+      "To dělají reaktivní protokoly.",
+      "To je vlastnost proaktivních.",
+      "To je základní rozdíl.",
+      "Mají odlišné principy."
+    ],
+    "explanation": "Proaktivní = vždy ready, reaktivní = on-demand."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Jaký je hlavní problém Distance Vector protokolů?",
+    "answers": [
+      "Velmi rychlá konvergence",
+      "Vznik směrovacích cyklů a count-to-infinity",
+      "Nepoužívají tabulky",
+      "Nepoužívají metriky"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Konvergence je pomalá.",
+      "To je zásadní problém DV.",
+      "Používají tabulky.",
+      "Používají např. počet hopů."
+    ],
+    "explanation": "DV trpí cykly a nekonečnými metrikami."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Jak DSDV řeší problém cyklů v DV?",
+    "answers": [
+      "Používá náhodné cesty",
+      "Používá sekvenční čísla pro aktualizaci tras",
+      "Používá flood bez omezení",
+      "Nepoužívá metriky"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Používá sekvenční čísla.",
+      "Zajišťuje aktuálnost informací.",
+      "To není řešení cyklů.",
+      "Metriky se stále používají."
+    ],
+    "explanation": "Sequence numbers eliminují cykly."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Jak funguje DSR při hledání cesty?",
+    "answers": [
+      "Používá centralizovaný server",
+      "Flooduje síť RREQ a ukládá cestu v paketu",
+      "Používá pouze tabulky",
+      "Nepoužívá odpovědi"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je distribuovaný.",
+      "Source routing ukládá celou cestu.",
+      "Cesta je v paketu.",
+      "Používá RREP."
+    ],
+    "explanation": "DSR ukládá celou cestu do paketu."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Jaká je hlavní nevýhoda DSR?",
+    "answers": [
+      "Krátké pakety",
+      "Velká režie kvůli cestě v záhlaví",
+      "Nepoužívá routing",
+      "Neumožňuje multi-hop"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Pakety jsou dlouhé.",
+      "Celá cesta zvyšuje velikost paketu.",
+      "Používá source routing.",
+      "Je určen pro multi-hop."
+    ],
+    "explanation": "Cesta v hlavičce = overhead."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Jaký je hlavní rozdíl mezi DSR a AODV?",
+    "answers": [
+      "DSR nepoužívá routing",
+      "AODV používá routing tabulky místo celé cesty v paketu",
+      "AODV nepoužívá RREQ",
+      "DSR používá IP routing"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Používá source routing.",
+      "To snižuje velikost paketů.",
+      "Používá RREQ.",
+      "To není hlavní rozdíl."
+    ],
+    "explanation": "AODV = tabulky, DSR = source routing."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Jaké zprávy používá AODV?",
+    "answers": [
+      "RREQ, RREP, RERR",
+      "ACK, SYN, FIN",
+      "HELLO, DATA",
+      "HTTP request/response"
     ],
     "correct": [
       0
     ],
     "explanations": [
-      "Správne, téma je zatiaľ pripravená ako placeholder.",
-      "Nesprávne, téma už bola pridaná.",
-      "Nesprávne, štruktúra vizualizácie zostala zachovaná.",
-      "Nesprávne, quiz ostáva funkčný."
+      "Základní zprávy AODV.",
+      "To je TCP.",
+      "To není kompletní sada.",
+      "To je aplikační vrstva."
     ],
-    "explanation": "Táto téma bola pridaná ako placeholder bez pôvodných otázok."
+    "explanation": "AODV používá 3 typy zpráv."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Jaký je hlavní princip HWMP?",
+    "answers": [
+      "Pouze reaktivní routing",
+      "Kombinace proaktivního a reaktivního přístupu",
+      "Používá pouze tabulky",
+      "Nepoužívá metriky"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je hybridní.",
+      "Hybridní routing.",
+      "Používá oba přístupy.",
+      "Používá airtime metriku."
+    ],
+    "explanation": "HWMP je hybridní protokol."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Co je hlavní vlastnost B.A.T.M.A.N.-adv?",
+    "answers": [
+      "Routing na aplikační vrstvě",
+      "L2 mesh routing bez znalosti celé topologie",
+      "Centralizované řízení",
+      "Používá IP routing tabulky"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je na L2 vrstvě.",
+      "Uzly znají jen nejlepšího souseda.",
+      "Je decentralizovaný.",
+      "Je na linkové vrstvě."
+    ],
+    "explanation": "BATMAN je decentralizovaný L2 mesh."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Jaký je hlavní účel RPL?",
+    "answers": [
+      "Routing v datových centrech",
+      "Routing pro IoT s nízkou spotřebou",
+      "Zrychlení Wi-Fi",
+      "Šifrování dat"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je určen pro IoT.",
+      "Optimalizován pro LLN.",
+      "Nesouvisí.",
+      "To není jeho hlavní účel."
+    ],
+    "explanation": "RPL je pro low-power IoT sítě."
+  },
+  {
+    "category": "Wireless Mesh Networks (smerovanie)",
+    "question": "Jaká topologie je typická pro RPL?",
+    "answers": [
+      "Plně mesh",
+      "Stromová (DODAG)",
+      "Kruhová",
+      "Lineární"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Používá strom.",
+      "Směrování směrem ke kořeni.",
+      "Nepoužívá se.",
+      "Není typická."
+    ],
+    "explanation": "RPL používá DODAG strom."
   },
   {
     "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
-    "question": "Placeholder otázka pre tému Wireless Sensor Networks (Zigbee, 802.15.4).",
+    "question": "Jaká je hlavní charakteristika WSN oproti klasickým sítím?",
     "answers": [
-      "Táto téma je pripravená",
-      "Táto téma ešte neexistuje",
-      "Vizualizácia je vypnutá",
-      "Quiz sa nedá spustiť"
+      "Vysoká přenosová rychlost a velké objemy dat",
+      "Důraz na nízkou spotřebu a dlouhou výdrž baterie",
+      "Použití pouze kabelových spojů",
+      "Vysoká latence je nežádoucí"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "WSN přenáší malé objemy dat.",
+      "Energetická efektivita je klíčová.",
+      "Jedná se o bezdrátové sítě.",
+      "Latence není hlavní problém."
+    ],
+    "explanation": "WSN optimalizuje spotřebu místo výkonu."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Proč není Wi-Fi vhodná pro WSN aplikace?",
+    "answers": [
+      "Má nízkou přenosovou rychlost",
+      "Má vysokou spotřebu energie",
+      "Nepodporuje IP komunikaci",
+      "Nemá dostatečný dosah"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Wi-Fi má vysokou rychlost.",
+      "To je hlavní problém.",
+      "Podporuje IP.",
+      "Dosah není hlavní problém."
+    ],
+    "explanation": "Spotřeba je pro WSN kritická."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Co definuje standard IEEE 802.15.4?",
+    "answers": [
+      "Celý síťový stack včetně aplikací",
+      "Pouze PHY a MAC vrstvu",
+      "Pouze routing",
+      "Pouze bezpečnost"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Řeší jen spodní vrstvy.",
+      "Vyšší vrstvy řeší jiné technologie.",
+      "Routing řeší ZigBee/Thread.",
+      "Bezpečnost je jen část."
+    ],
+    "explanation": "802.15.4 = PHY + MAC."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Jaká je maximální velikost rámce v IEEE 802.15.4?",
+    "answers": [
+      "64 B",
+      "127 B",
+      "512 B",
+      "1500 B"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je větší.",
+      "To je pevný limit standardu.",
+      "Příliš velké.",
+      "To je Ethernet."
+    ],
+    "explanation": "Malé rámce šetří energii."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Proč jsou přenosové rychlosti v 802.15.4 nízké?",
+    "answers": [
+      "Kvůli technologickému omezení",
+      "Protože cílem je úspora energie",
+      "Protože není možné vyšší rychlosti",
+      "Kvůli absenci MAC vrstvy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je to design rozhodnutí.",
+      "Nižší rychlost = nižší spotřeba.",
+      "Je to možné jinými technologiemi.",
+      "MAC existuje."
+    ],
+    "explanation": "Energetická efektivita > rychlost."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Jaký je hlavní rozdíl mezi CSMA/CD a CSMA/CA?",
+    "answers": [
+      "CSMA/CD detekuje kolize, CSMA/CA se jim snaží předejít",
+      "CSMA/CA detekuje kolize",
+      "CSMA/CD nepoužívá médium",
+      "Oba fungují stejně"
     ],
     "correct": [
       0
     ],
     "explanations": [
-      "Správne, téma je zatiaľ pripravená ako placeholder.",
-      "Nesprávne, téma už bola pridaná.",
-      "Nesprávne, štruktúra vizualizácie zostala zachovaná.",
-      "Nesprávne, quiz ostáva funkčný."
+      "Bezdrát neumí detekovat kolize.",
+      "Ne detekuje, ale vyhýbá se.",
+      "Používá sdílené médium.",
+      "Rozdíl je zásadní."
     ],
-    "explanation": "Táto téma bola pridaná ako placeholder bez pôvodných otázok."
+    "explanation": "Bezdrát -> collision avoidance."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Co je CCA v IEEE 802.15.4?",
+    "answers": [
+      "Zaručení volného média",
+      "Odhad, zda je médium volné",
+      "Potvrzení přenosu",
+      "Typ rámce"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Není to garance.",
+      "Rozhodnutí na základě měření.",
+      "To je ACK.",
+      "Je to mechanismus PHY."
+    ],
+    "explanation": "CCA = odhad, nie istota."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Jaký je rozdíl mezi FFD a RFD?",
+    "answers": [
+      "FFD je jednodušší zařízení",
+      "RFD může routovat provoz",
+      "FFD má plnou funkcionalitu, RFD je omezené zařízení",
+      "Neexistuje mezi nimi rozdíl"
+    ],
+    "correct": [
+      2
+    ],
+    "explanations": [
+      "FFD je komplexnější.",
+      "RFD neroutuje.",
+      "RFD je typicky end device.",
+      "Rozdíl je zásadní."
+    ],
+    "explanation": "FFD = router/coordinator, RFD = end device."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Proč zařízení používají 16bitovou krátkou adresu místo 64bitové?",
+    "answers": [
+      "Protože je bezpečnější",
+      "Protože snižuje režii rámce a spotřebu",
+      "Protože je globálně unikátní",
+      "Protože je povinná"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Bezpečnost nesouvisí.",
+      "Menší data = menší spotřeba.",
+      "To je 64bitová adresa.",
+      "Je volitelná."
+    ],
+    "explanation": "Optimalizace energie a overheadu."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Jaký je hlavní rozdíl mezi beacon a non-beacon sítí?",
+    "answers": [
+      "Beacon síť nepoužívá synchronizaci",
+      "Beacon síť organizuje čas do superframe",
+      "Non-beacon síť nepoužívá CSMA",
+      "Non-beacon síť je synchronizovaná"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Používá beacon.",
+      "Koordinátor vysílá beacon.",
+      "Používá CSMA/CA.",
+      "Je nesynchronizovaná."
+    ],
+    "explanation": "Beacon = časová synchronizace."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Proč GTS není často používáno v praxi?",
+    "answers": [
+      "Protože je příliš jednoduché",
+      "Protože vyžaduje synchronizaci a beacon režim",
+      "Protože nefunguje",
+      "Protože nepodporuje data"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je složitější.",
+      "Zvyšuje komplexitu.",
+      "Funguje, ale má nevýhody.",
+      "Podporuje."
+    ],
+    "explanation": "Komplexita > benefit."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Jaký je hlavní přínos ZigBee oproti 802.15.4?",
+    "answers": [
+      "Vyšší přenosová rychlost",
+      "Přidání síťové vrstvy a routingu",
+      "Zrušení MAC vrstvy",
+      "Použití kabelu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Rychlost zůstává stejná.",
+      "Zajišťuje kompletní síť.",
+      "MAC zůstává.",
+      "Je bezdrátové."
+    ],
+    "explanation": "ZigBee = network layer + aplikace."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Proč je mesh topologie robustnější než star?",
+    "answers": [
+      "Má jeden centrální bod",
+      "Má více alternativních cest",
+      "Má vyšší rychlost",
+      "Používá méně uzlů"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To je star.",
+      "Zvyšuje spolehlivost.",
+      "Rychlost není hlavní faktor.",
+      "Používá více uzlů."
+    ],
+    "explanation": "Redundance = robustnost."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Proč Thread nepotřebuje gateway jako ZigBee?",
+    "answers": [
+      "Protože nepoužívá IP",
+      "Protože je nativně IP-based",
+      "Protože nepoužívá routing",
+      "Protože je centralizovaný"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Používá IPv6.",
+      "Používá IPv6.",
+      "Používá mesh routing.",
+      "Je decentralizovaný."
+    ],
+    "explanation": "Thread = priamo IP sieť."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Jaký problém řeší 6LoWPAN?",
+    "answers": [
+      "Nedostatek energie",
+      "Velkou velikost IPv6 hlavičky",
+      "Absenci MAC vrstvy",
+      "Absenci PHY vrstvy"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Řeší overhead.",
+      "Komprimuje hlavičky.",
+      "MAC existuje.",
+      "PHY existuje."
+    ],
+    "explanation": "IPv6 musí byť zmenšené pre 127B frame."
+  },
+  {
+    "category": "Wireless Sensor Networks (Zigbee, 802.15.4)",
+    "question": "Jaký je hlavní princip sleepy end device?",
+    "answers": [
+      "Je stále aktivní",
+      "Většinu času spí a probouzí se jen periodicky",
+      "Routuje provoz",
+      "Má vyšší výkon"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To by zvyšovalo spotřebu.",
+      "Šetří energii.",
+      "Neroutuje.",
+      "Je úsporný."
+    ],
+    "explanation": "Sleep = hlavný trik WSN."
   },
   {
     "category": "Wireless Personal Area Networks (Bluetooth)",
-    "question": "Placeholder otázka pre tému Wireless Personal Area Networks (Bluetooth).",
+    "question": "Jaká je typická charakteristika WPAN sítí?",
     "answers": [
-      "Táto téma je pripravená",
-      "Táto téma ešte neexistuje",
-      "Vizualizácia je vypnutá",
-      "Quiz sa nedá spustiť"
+      "Velký dosah a vysoká přenosová rychlost",
+      "Krátký dosah a nízká spotřeba energie",
+      "Pouze kabelová komunikace",
+      "Pouze vysoký výkon"
     ],
     "correct": [
-      0
+      1
     ],
     "explanations": [
-      "Správne, téma je zatiaľ pripravená ako placeholder.",
-      "Nesprávne, téma už bola pridaná.",
-      "Nesprávne, štruktúra vizualizácie zostala zachovaná.",
-      "Nesprávne, quiz ostáva funkčný."
+      "WPAN má krátký dosah.",
+      "To je hlavní vlastnost WPAN.",
+      "Jedná se o bezdrátové sítě.",
+      "Důraz je na úsporu."
     ],
-    "explanation": "Táto téma bola pridaná ako placeholder bez pôvodných otázok."
+    "explanation": "WPAN = krátký dosah + nízká spotřeba."
+  },
+  {
+    "category": "Wireless Personal Area Networks (Bluetooth)",
+    "question": "V jakém pásmu pracuje Bluetooth?",
+    "answers": [
+      "5 GHz",
+      "2.4 GHz ISM",
+      "900 MHz",
+      "60 GHz"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To je Wi-Fi.",
+      "Bezlicenční pásmo.",
+      "Nepoužívá se zde.",
+      "To není Bluetooth."
+    ],
+    "explanation": "Bluetooth = 2.4 GHz."
+  },
+  {
+    "category": "Wireless Personal Area Networks (Bluetooth)",
+    "question": "Jaký je hlavní rozdíl mezi BR/EDR a BLE?",
+    "answers": [
+      "BLE má vyšší spotřebu energie",
+      "BR/EDR je optimalizován pro IoT senzory",
+      "BLE je optimalizováno pro nízkou spotřebu a krátké přenosy",
+      "Neexistuje mezi nimi rozdíl"
+    ],
+    "correct": [
+      2
+    ],
+    "explanations": [
+      "BLE je úspornější.",
+      "To je BLE.",
+      "To je hlavní rozdíl.",
+      "Rozdíl je zásadní."
+    ],
+    "explanation": "BLE = low energy IoT."
+  },
+  {
+    "category": "Wireless Personal Area Networks (Bluetooth)",
+    "question": "Co je piconet v Bluetooth?",
+    "answers": [
+      "Síť více routerů",
+      "Síť s jedním primary a více secondary zařízeními",
+      "Mesh síť",
+      "Kabelová síť"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To není Bluetooth koncept.",
+      "Základní topologie.",
+      "To není základ Bluetooth.",
+      "Bluetooth je bezdrátový."
+    ],
+    "explanation": "Piconet = základ Bluetooth."
+  },
+  {
+    "category": "Wireless Personal Area Networks (Bluetooth)",
+    "question": "Kolik aktivních zařízení může být v piconet?",
+    "answers": [
+      "1",
+      "7",
+      "255",
+      "Neomezeně"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je jich více.",
+      "Max 7 secondary.",
+      "To jsou parked zařízení.",
+      "Je limit."
+    ],
+    "explanation": "Max 7 active secondary."
+  },
+  {
+    "category": "Wireless Personal Area Networks (Bluetooth)",
+    "question": "Jaký je princip FHSS v Bluetooth?",
+    "answers": [
+      "Používá jeden kanál",
+      "Přeskakuje mezi frekvencemi pro snížení interference",
+      "Používá kabel",
+      "Používá pouze časové sloty"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Používá více kanálů.",
+      "Zvyšuje robustnost.",
+      "Bezdrátová technologie.",
+      "Používá frekvenční hopping."
+    ],
+    "explanation": "FHSS = anti-interference."
+  },
+  {
+    "category": "Wireless Personal Area Networks (Bluetooth)",
+    "question": "Jak dlouhý je časový slot v Bluetooth?",
+    "answers": [
+      "1 ms",
+      "625 µs",
+      "10 µs",
+      "1 s"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je kratší.",
+      "Základní jednotka času.",
+      "Příliš krátké.",
+      "Příliš dlouhé."
+    ],
+    "explanation": "Slot = 625 mikrosekund."
+  },
+  {
+    "category": "Wireless Personal Area Networks (Bluetooth)",
+    "question": "Kdo řídí přístup k médiu v Bluetooth?",
+    "answers": [
+      "Secondary zařízení",
+      "Primary zařízení",
+      "Router",
+      "Všechna zařízení stejně"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Pouze odpovídají.",
+      "Řídí komunikaci.",
+      "Bluetooth nemá routery.",
+      "Řízení je centralizované."
+    ],
+    "explanation": "Primary = control."
+  },
+  {
+    "category": "Wireless Personal Area Networks (Bluetooth)",
+    "question": "Jaký je rozdíl mezi SCO a ACL?",
+    "answers": [
+      "SCO je pro data, ACL pro hlas",
+      "SCO je pro hlas bez retransmisí, ACL pro data s ARQ",
+      "ACL nepoužívá rámce",
+      "SCO používá ARQ"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je to naopak.",
+      "Rozdíl v spolehlivosti.",
+      "Používá.",
+      "Nepoužívá."
+    ],
+    "explanation": "SCO = latency, ACL = reliability."
+  },
+  {
+    "category": "Wireless Personal Area Networks (Bluetooth)",
+    "question": "Proč SCO nepoužívá retransmise?",
+    "answers": [
+      "Protože není potřeba spolehlivost",
+      "Protože důležitější je nízké zpoždění",
+      "Protože nepřenáší data",
+      "Protože je to chyba designu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Je potřeba, ale jinak řešeno.",
+      "Audio musí být realtime.",
+      "Přenáší hlas.",
+      "Je to záměr."
+    ],
+    "explanation": "Latency > reliability."
+  },
+  {
+    "category": "Wireless Personal Area Networks (Bluetooth)",
+    "question": "Jaký je účel pairing v Bluetooth?",
+    "answers": [
+      "Zvýšení rychlosti",
+      "Vytvoření sdíleného klíče mezi zařízeními",
+      "Změna frekvence",
+      "Zvýšení dosahu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Nemá vliv na rychlost.",
+      "Základ bezpečnosti.",
+      "To není pairing.",
+      "Nesouvisí."
+    ],
+    "explanation": "Pairing = security setup."
+  },
+  {
+    "category": "Wireless Personal Area Networks (Bluetooth)",
+    "question": "Co dělá autentizace v Bluetooth?",
+    "answers": [
+      "Šifruje data",
+      "Ověřuje identitu zařízení pomocí challenge-response",
+      "Zvyšuje rychlost",
+      "Vytváří piconet"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To dělá encryption.",
+      "Zabraňuje podvržení.",
+      "Nemá vliv na výkon.",
+      "To je jiný proces."
+    ],
+    "explanation": "Authentication = identity check."
+  },
+  {
+    "category": "Wireless Personal Area Networks (Bluetooth)",
+    "question": "Jaký je hlavní účel šifrování v Bluetooth?",
+    "answers": [
+      "Zvýšení rychlosti",
+      "Ochrana dat proti odposlechu",
+      "Změna topologie",
+      "Zvýšení dosahu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Nemá vliv na rychlost.",
+      "Zajišťuje důvěrnost.",
+      "Nesouvisí.",
+      "Nesouvisí."
+    ],
+    "explanation": "Encryption = confidentiality."
   },
   {
     "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
-    "question": "Placeholder otázka pre tému Wireless Local Area Networks (Wi-Fi, 802.11).",
+    "question": "Na jakém standardu je založena technologie Wi-Fi?",
     "answers": [
-      "Táto téma je pripravená",
-      "Táto téma ešte neexistuje",
-      "Vizualizácia je vypnutá",
-      "Quiz sa nedá spustiť"
+      "IEEE 802.3",
+      "IEEE 802.11",
+      "IEEE 802.15",
+      "IEEE 802.16"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To je Ethernet.",
+      "Základ Wi-Fi.",
+      "To je WPAN.",
+      "To je WiMAX."
+    ],
+    "explanation": "Wi-Fi = 802.11."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Jaký typ duplexu používá Wi-Fi?",
+    "answers": [
+      "Full-duplex",
+      "Half-duplex (TDD)",
+      "Simplex",
+      "Optický duplex"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Wi-Fi není full duplex.",
+      "Používá TDD.",
+      "Obousměrná komunikace.",
+      "Nesmysl zde."
+    ],
+    "explanation": "Wi-Fi = TDD."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Co je BSS ve Wi-Fi?",
+    "answers": [
+      "Základní jednotka sítě řízená AP",
+      "Typ šifrování",
+      "Fyzická vrstva",
+      "Typ rámce"
     ],
     "correct": [
       0
     ],
     "explanations": [
-      "Správne, téma je zatiaľ pripravená ako placeholder.",
-      "Nesprávne, téma už bola pridaná.",
-      "Nesprávne, štruktúra vizualizácie zostala zachovaná.",
-      "Nesprávne, quiz ostáva funkčný."
+      "BSS = základ Wi-Fi.",
+      "To není BSS.",
+      "To není vrstva.",
+      "Nesouvisí."
     ],
-    "explanation": "Táto téma bola pridaná ako placeholder bez pôvodných otázok."
+    "explanation": "BSS = základní síť."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Jaký je rozdíl mezi infrastrukturní a ad-hoc sítí?",
+    "answers": [
+      "Ad-hoc má AP",
+      "Infrastrukturní síť používá AP, ad-hoc ne",
+      "Obě mají AP",
+      "Ani jedna nemá AP"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Nemá AP.",
+      "Základní rozdíl.",
+      "Ad-hoc nemá.",
+      "Infrastrukturní má."
+    ],
+    "explanation": "AP vs peer-to-peer."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Co je ESS ve Wi-Fi?",
+    "answers": [
+      "Jedna stanice",
+      "Více BSS propojených do jedné sítě",
+      "Typ modulace",
+      "Typ rámce"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To není ESS.",
+      "ESS = více AP.",
+      "Nesouvisí.",
+      "Nesouvisí."
+    ],
+    "explanation": "ESS = více BSS."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Jaká metoda přístupu k médiu se používá ve Wi-Fi?",
+    "answers": [
+      "CSMA/CD",
+      "CSMA/CA",
+      "Token Ring",
+      "FDMA"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To je Ethernet.",
+      "Používá se v Wi-Fi.",
+      "Nepoužívá se.",
+      "To není MAC metoda."
+    ],
+    "explanation": "Wi-Fi = CSMA/CA."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Jaký je účel RTS/CTS?",
+    "answers": [
+      "Zrychlení přenosu",
+      "Řešení problému skrytých terminálů",
+      "Šifrování dat",
+      "Změna kanálu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Není hlavní účel.",
+      "Prevence kolizí.",
+      "Neslouží k tomu.",
+      "Nesouvisí."
+    ],
+    "explanation": "Hidden node problem."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Co obsahuje pole Frame Control?",
+    "answers": [
+      "Pouze adresy",
+      "Typ rámce a jeho vlastnosti",
+      "Pouze payload",
+      "Pouze checksum"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Obsahuje více informací.",
+      "Určuje typ rámce.",
+      "Není payload.",
+      "To je FCS."
+    ],
+    "explanation": "FC = metadata rámce."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Kolik adres může obsahovat Wi-Fi rámec?",
+    "answers": [
+      "1",
+      "2",
+      "4",
+      "6"
+    ],
+    "correct": [
+      2
+    ],
+    "explanations": [
+      "Je jich více.",
+      "Nedostatečné.",
+      "Maximální počet.",
+      "To není pravda."
+    ],
+    "explanation": "Max 4 adresy."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Co určuje pole To DS / From DS?",
+    "answers": [
+      "Typ šifrování",
+      "Směr přenosu rámce",
+      "Rychlost přenosu",
+      "Velikost rámce"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Nesouvisí.",
+      "Určuje routing.",
+      "Nesouvisí.",
+      "Nesouvisí."
+    ],
+    "explanation": "Direction control."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Jak probíhá roaming ve Wi-Fi?",
+    "answers": [
+      "Autentizace -> scanning -> asociace",
+      "Scanning -> autentizace -> asociace",
+      "Asociace -> scanning -> autentizace",
+      "Pouze scanning"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Špatné pořadí.",
+      "Správné pořadí.",
+      "Špatné pořadí.",
+      "Nedostatečné."
+    ],
+    "explanation": "3 fáze roamingu."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Co je Beacon frame?",
+    "answers": [
+      "Řídicí rámec pro ACK",
+      "Rámec pro synchronizaci a informování klientů",
+      "Datový rámec",
+      "Chybový rámec"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To není beacon.",
+      "AP vysílá pravidelně.",
+      "Není data.",
+      "Nesouvisí."
+    ],
+    "explanation": "Beacon = sync + info."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Jaký je rozdíl mezi WPA2 a WPA3?",
+    "answers": [
+      "WPA3 používá SAE místo PSK",
+      "WPA2 je bezpečnější",
+      "WPA3 nepoužívá šifrování",
+      "WPA2 nepoužívá klíče"
+    ],
+    "correct": [
+      0
+    ],
+    "explanations": [
+      "Bezpečnější autentizace.",
+      "WPA3 je novější.",
+      "Používá AES.",
+      "Používá."
+    ],
+    "explanation": "SAE vs PSK."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Co je PMK ve WPA2?",
+    "answers": [
+      "Dočasný klíč",
+      "Hlavní klíč odvozený z hesla",
+      "Šifrovací algoritmus",
+      "MAC adresa"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "To je PTK.",
+      "Základ handshake.",
+      "Není algoritmus.",
+      "Nesouvisí."
+    ],
+    "explanation": "PMK = master key."
+  },
+  {
+    "category": "Wireless Local Area Networks (Wi-Fi, 802.11)",
+    "question": "Jaký je účel 4-way handshake?",
+    "answers": [
+      "Změna kanálu",
+      "Autentizace a vytvoření šifrovacího klíče",
+      "Zrychlení přenosu",
+      "Řízení roamingu"
+    ],
+    "correct": [
+      1
+    ],
+    "explanations": [
+      "Neslouží k tomu.",
+      "Klíčová fáze WPA2.",
+      "Nesouvisí.",
+      "Nesouvisí."
+    ],
+    "explanation": "Security handshake."
   }
 ]

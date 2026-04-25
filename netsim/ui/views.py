@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import random
+from pathlib import Path
 
 from rich.align import Align
 from rich.columns import Columns
@@ -16,7 +17,6 @@ from netsim.data.lessons import LESSONS
 from netsim.data.text_content import (
     ARCHITECTURE_ITEMS,
     HELP_TEXT,
-    HOME_INTRO,
     SCENARIOS_TEXT,
     SIMULATION_TEXT,
 )
@@ -27,6 +27,9 @@ from netsim.ui.state import DIFFICULTY_MENU, MAIN_MENU, AppState, Screen
 LESSONS_LIST_HEIGHT = len(LESSONS) + 6
 LESSONS_MENU_TOTAL_HEIGHT = LESSONS_LIST_HEIGHT + 7 + 14
 LESSONS_PERCENT_HEIGHT = LESSONS_MENU_TOTAL_HEIGHT - LESSONS_LIST_HEIGHT
+NETSIM_LOGO = (
+    Path(__file__).resolve().parents[2] / "assets" / "ascii" / "netsim_logo.txt"
+).read_text(encoding="utf-8").strip("\n")
 PERCENT_GLYPHS = {
     "1": [
         " ████",
@@ -156,7 +159,7 @@ def render_percentage_badge(value: int) -> Panel:
     badge = Text("\n".join(rows), style="#9fe7ff bold")
     return Panel(
         Align.center(badge, vertical="middle"),
-        title="PERCENTAGE",
+        title="BEST SCORE",
         border_style="#53b4ff",
         padding=(1, 1),
         height=LESSONS_PERCENT_HEIGHT,
@@ -502,16 +505,17 @@ def lesson_quiz_panel(state: AppState) -> RenderableType:
     explanations = Text()
     submitted = state.quiz_feedback_visible and result
     if submitted:
-        explanations.append("EXPLANATIONS\n\n", style="#8fe0ff bold")
         if question.explanation:
             explanations.append(f"{question.explanation}\n\n", style="#d8efff bold")
+        else:
+            explanations.append("NO GENERAL EXPLANATION AVAILABLE.\n\n", style="#d8efff")
         for index, answer in enumerate(question.answers):
             correct = index in question.correct
             style = "#57d18a bold" if correct else "#f08a8a bold"
             explanations.append(f"{answer}\n", style=style)
             explanations.append(f"{question.explanations[index]}\n\n", style="#d8efff")
 
-    left = stacked_quiz_windows(prompt, explanations, explanation_title="EXPLANATION" if submitted else "")
+    left = stacked_quiz_windows(prompt, explanations, explanation_title="EXPLANATION")
     return left
 
 
@@ -565,7 +569,7 @@ def quiz_difficulty_sidebar(state: AppState) -> Group:
         lines.append(f"{prefix} {label}\n", style=style)
     return Group(
         Panel(lines, title="DIFFICULTY", border_style="#53b4ff", padding=(1, 1)),
-        Panel(Text(f"CATEGORY: {state.selected_quiz_label()}\nBEST: {state.quiz_best_score()}%", style="#d8efff"), title="SELECTION", border_style="#53b4ff", padding=(1, 1)),
+        Panel(Text(f"CATEGORY: {state.selected_quiz_label()}\nBEST SCORE: {state.quiz_best_score()}%", style="#d8efff"), title="SELECTION", border_style="#53b4ff", padding=(1, 1)),
     )
 
 
@@ -674,11 +678,13 @@ def placeholder_content(text: str) -> RenderableType:
 
 
 def home_content() -> RenderableType:
-    intro = Text()
-    intro.append("NETSIM MAIN MENU\n\n", style="#8fe0ff bold")
-    intro.append(HOME_INTRO.upper())
-    intro.append("\n\nSELECT LESSONS TO STUDY AND ANSWER THE QUIZ INSIDE EACH LESSON.")
-    return Panel(intro, title="OVERVIEW", border_style="#53b4ff", padding=(1, 2))
+    logo = Text(NETSIM_LOGO, style="#8fe0ff")
+    return Panel(
+        Align.center(logo, vertical="middle"),
+        border_style="#53b4ff",
+        padding=(1, 2),
+        height=LESSONS_MENU_TOTAL_HEIGHT,
+    )
 
 
 def sidebar_for(state: AppState) -> RenderableType:
@@ -701,7 +707,7 @@ def sidebar_for(state: AppState) -> RenderableType:
             info.append(f"CATEGORY: {state.selected_quiz_label()}\n")
             info.append(f"DIFFICULTY: {state.selected_difficulty_label()}\n")
             info.append(f"SCORE: {state.quiz_session.score}/{state.quiz_session.completed}\n")
-            info.append(f"BEST: {state.quiz_best_score()}%\n\n")
+            info.append(f"BEST SCORE: {state.quiz_best_score()}%\n\n")
         info.append("0 RETURNS TO THE TOPIC LIST.")
         return Panel(info, title="QUIZ STATUS", border_style="#53b4ff", padding=(1, 1))
     if state.screen == Screen.SIMULATION:

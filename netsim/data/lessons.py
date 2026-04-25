@@ -153,21 +153,33 @@ LESSONS = (
         key="medium_access_control",
         title="ŘÍZENÍ PŘÍSTUPU K BEZDRÁTOVÉMU MÉDIU",
         description=(
-            "- SDÍLENÉ MÉDIUM\n"
-            "- KOLIZE\n"
-            "- CSMA/CA\n"
-            "- ZÁKLADY PŘÍSTUPU K MÉDIU"
+            "- MAC = RIADENIE PRÍSTUPU VIACERÝCH STANÍC K ZDIEĽANÉMU MÉDIU\n"
+            "- CIEĽ: ELIMINÁCIA KOLÍZIÍ + EFEKTIVITA, SPRAVODLIVOSŤ, QOS\n"
+            "- RANDOM A RIADENÝ PRÍSTUP\n"
+            "- MULTIPLEXING A MODERNÉ PRÍSTUPY"
         ),
         preview=(
-            "Lekcia sa zameriava na pravidlá, podľa ktorých sa viaceré zariadenia delia o "
-            "rovnaké bezdrôtové médium."
+            "- RANDOM PRÍSTUP: ALOHA, SLOTTED ALOHA, CSMA\n"
+            "- ALOHA -> VYSIELANIE KEDYKOĽVEK, KOLÍZIE -> BACKOFF\n"
+            "- SLOTTED ALOHA -> ČASOVÉ SLOTY, VYŠŠIA EFEKTIVITA\n"
+            "- CSMA -> POČÚVA MÉDIUM PRED VYSIELANÍM\n"
+            "- CSMA/CD -> DETEKCIA KOLÍZIÍ (ETHERNET)\n"
+            "- CSMA/CA -> VYHÝBANIE SA KOLÍZIÁM (WI-FI)\n"
+            "- CSMA STRATÉGIE: 1-PERSISTENT, NON-PERSISTENT, P-PERSISTENT\n"
+            "- CSMA/CA: LISTEN -> IFS -> BACKOFF -> VYSIELANIE -> ACK\n"
+            "- RTS/CTS -> RIEŠENIE HIDDEN NODE PROBLÉMU\n"
+            "- PROBLÉMY BEZDRÔTU: HIDDEN TERMINAL, EXPOSED TERMINAL, NEAR-FAR\n"
+            "- RIADENÝ PRÍSTUP: REZERVÁCIA, POLLING, TOKEN PASSING\n"
+            "- MULTIPLEXING: FDMA, TDMA, CDMA, OFDMA, SC-FDMA, NOMA"
         ),
         detail=(
-            "Bezdrôtové prostredie je zdieľané a vyžaduje koordináciu prístupu.\n\n"
+            "Bezdrôtové prostredie je zdieľané a vyžaduje koordináciu prístupu medzi "
+            "viacerými stanicami.\n\n"
             "Focus areas:\n"
-            "- kolízie\n"
-            "- vyhýbanie sa kolíziám\n"
-            "- základné MAC princípy"
+            "- random vs riadený prístup\n"
+            "- CSMA/CA a riešenie kolízií\n"
+            "- problémy bezdrôtového média\n"
+            "- FDMA, TDMA, CDMA, OFDMA, SC-FDMA a NOMA"
         ),
         ascii_header=LESSON_HEADERS["medium_access_control"],
     ),
@@ -175,21 +187,34 @@ LESSONS = (
         key="mesh_routing",
         title="WIRELESS WIDE NETWORKS / MOBILE NETWORKS",
         description=(
-            "- LTE\n"
-            "- 5G\n"
-            "- BUNKOVÉ SIETE\n"
-            "- MOBILITA"
+            "- BUNKOVÉ SIETE = ROZDELENIE PRIESTORU NA BUNKY + REUSE FREKVENCIÍ\n"
+            "- HEXAGONÁLNY MODEL A COLORING PROBLEM\n"
+            "- VÝVOJ 1G AŽ 5G\n"
+            "- ARCHITEKTÚRA 4G/5G A CORE NETWORK"
         ),
         preview=(
-            "Táto lekcia pokrýva širokoplošné mobilné siete, ich generácie a základné "
-            "vlastnosti moderných bunkových systémov."
+            "- BUNKOVÉ SIETE -> REUSE FREKVENCIÍ, RUŠENIE SUSEDNÝCH BUNIEK\n"
+            "- ARCHITEKTÚRA: UE, BTS, BSC, MSC + CORE NETWORK\n"
+            "- 1G = ANALÓG, OKRUHY\n"
+            "- 2G = DIGITÁL, GSM, SMS, TDMA/FDMA\n"
+            "- 2.5G = GPRS (PAKETY), EDGE (VYŠŠIA RÝCHLOSŤ)\n"
+            "- 3G = UMTS, MULTIMÉDIÁ, NODEB + RNC\n"
+            "- 4G = LTE, PLNE IP, PACKET SWITCHING\n"
+            "- 5G = VYSOKÉ RÝCHLOSTI, NÍZKA LATENCIA, IOT\n"
+            "- 4G EPC: HSS, MME, SGW, PCRF, IMS\n"
+            "- 5G: SBA, CUPS, NF (AMF, SMF, UPF, AUSF), NETWORK SLICING\n"
+            "- 4G VS 5G SIGNALIZÁCIA: DIAMETER -> HTTP/2 + REST\n"
+            "- SDN: NORTHBOUND VS SOUTHBOUND API, REST, OPENFLOW\n"
+            "- SIMULÁCIE: UERANSIM, OPEN-SOURCE 5G STACK"
         ),
         detail=(
-            "Mobilné siete umožňujú bezdrôtový prístup na veľké vzdialenosti.\n\n"
+            "Mobilné siete umožňujú bezdrôtový prístup na veľké vzdialenosti pomocou "
+            "bunkovej architektúry a evolúcie od 1G po 5G.\n\n"
             "Focus areas:\n"
-            "- LTE a 5G\n"
-            "- bunková architektúra\n"
-            "- mobilita používateľa"
+            "- bunkový model a reuse frekvencií\n"
+            "- vývoj generácií 1G až 5G\n"
+            "- 4G EPC a 5G service-based architektúra\n"
+            "- network slicing, SDN a simulácie"
         ),
         ascii_header=LESSON_HEADERS["mesh_routing"],
     ),
@@ -197,21 +222,32 @@ LESSONS = (
         key="wsn_iot",
         title="WIRELESS MESH NETWORKS (SMEROVANIE)",
         description=(
-            "- MULTI-HOP\n"
-            "- FORWARDING\n"
-            "- ROUTING\n"
-            "- MESH TOPOLOGY"
+            "- MULTI-HOP SIETE = KOMUNIKÁCIA CEZ MEDZILEHLÉ UZLY\n"
+            "- WMN VS AD HOC\n"
+            "- ROUTING PROTOKOLY\n"
+            "- DEZENTRALIZOVANÉ SMEROVANIE"
         ),
         preview=(
-            "Lekcia predstavuje mesh siete a smerovanie v decentralizovanom bezdrôtovom "
-            "prostredí."
+            "- WMN -> ROUTING ROBIA ŠPECIÁLNE ROUTERY\n"
+            "- AD HOC -> ROUTING ROBIA SAMOTNÉ UZLY\n"
+            "- VLASTNOSTI AD HOC: DYNAMICKÁ TOPOLOGIA, ŽIADNY CENTRÁLNY UZOL, NÍZKA ENERGIA\n"
+            "- TYPY ROUTINGU: PROAKTÍVNE, REAKTÍVNE, HYBRIDNÉ, HIERARCHICKÉ\n"
+            "- DV: LEN INFO OD SUSEDOV, PROBLÉM CYKLY A COUNT-TO-INFINITY\n"
+            "- DSDV -> SEQUENCE NUMBERS PROTI CYKLOM\n"
+            "- DSR -> SOURCE ROUTING, RREQ -> RREP\n"
+            "- AODV -> TABUĽKY LEN PRE AKTÍVNE CESTY, RREQ / RREP / RERR\n"
+            "- HWMP -> HYBRID PRE WI-FI MESH, AIRTIME METRIKA\n"
+            "- B.A.T.M.A.N -> L2 ROUTING, SELF-HEALING, DEZENTRALIZOVANÝ\n"
+            "- RPL -> IOT SIETE, DODAG STROM, ENERGETICKÁ EFEKTIVITA"
         ),
         detail=(
-            "Mesh siete využívajú viacskokový prenos a smerovanie medzi uzlami.\n\n"
+            "Mesh a ad hoc siete využívajú viacskokový prenos a decentralizované "
+            "smerovanie medzi uzlami.\n\n"
             "Focus areas:\n"
-            "- multi-hop komunikácia\n"
-            "- objavovanie trás\n"
-            "- odolnosť topológie"
+            "- multi-hop komunikácia a forwarding\n"
+            "- WMN vs ad hoc prístup k routingu\n"
+            "- proaktívne, reaktívne a hybridné protokoly\n"
+            "- DSDV, DSR, AODV, HWMP, B.A.T.M.A.N a RPL"
         ),
         ascii_header=LESSON_HEADERS["wsn_iot"],
     ),
@@ -219,21 +255,31 @@ LESSONS = (
         key="short_range",
         title="WIRELESS SENSOR NETWORKS (ZIGBEE, 802.15.4)",
         description=(
-            "- ZIGBEE\n"
-            "- 802.15.4\n"
-            "- NÍZKA SPOTREBA\n"
-            "- SENZOROVÉ UZLY"
+            "- WSN = VEĽA JEDNODUCHÝCH UZLOV, NÍZKA SPOTREBA, MALÉ DÁTA\n"
+            "- HLAVNÝ CIEĽ: VÝDRŽ BATÉRIE, NIE VÝKON\n"
+            "- IEEE 802.15.4\n"
+            "- ZIGBEE A THREAD"
         ),
         preview=(
-            "Táto časť sa venuje senzorovým sieťam, nízkoenergetickému prenosu a rodine "
-            "technológií okolo Zigbee a IEEE 802.15.4."
+            "- 802.15.4 RIEŠI LEN PHY + MAC\n"
+            "- MALÉ RÁMCE (127 B MAX), NÍZKE RÝCHLOSTI, NÍZKA SPOTREBA\n"
+            "- PHY: PÁSMA 868 / 915 / 2.4 GHZ, CCA, CRC, KANÁLY\n"
+            "- MAC: CSMA/CA, ACK VS SPOTREBA, BEACON VS NON-BEACON, GTS\n"
+            "- ZARIADENIA: FFD VS RFD\n"
+            "- ROLY: COORDINATOR / ROUTER / END DEVICE\n"
+            "- ZIGBEE -> NETWORK LAYER + ROUTING, TOPOLOGIE STAR / TREE / MESH\n"
+            "- THREAD -> IP-BASED (IPV6 + 6LOWPAN), MESH ROUTING (RPL)\n"
+            "- THREAD ROLY: LEADER, ROUTER, END DEVICE\n"
+            "- BORDER ROUTER = PREPOJENIE DO IP SIETE"
         ),
         detail=(
-            "Senzorové siete sú navrhnuté pre nízku spotrebu a jednoduchú komunikáciu.\n\n"
+            "Senzorové siete sú navrhnuté pre nízku spotrebu, malé objemy dát a dlhú "
+            "výdrž batérie.\n\n"
             "Focus areas:\n"
-            "- 802.15.4\n"
-            "- Zigbee\n"
-            "- nízkoenergetické uzly"
+            "- 802.15.4 PHY a MAC vrstva\n"
+            "- roly zariadení a energetická efektivita\n"
+            "- Zigbee topológie a routing\n"
+            "- Thread, 6LoWPAN, RPL a border router"
         ),
         ascii_header=LESSON_HEADERS["short_range"],
     ),
@@ -241,20 +287,31 @@ LESSONS = (
         key="wifi_networks",
         title="WIRELESS PERSONAL AREA NETWORKS (BLUETOOTH)",
         description=(
-            "- BLUETOOTH\n"
-            "- WPAN\n"
-            "- PÁROVANIE\n"
-            "- KRÁTKA VZDIALENOSŤ"
+            "- WPAN = KRÁTKY DOSAH, NÍZKA SPOTREBA, JEDNODUCHÉ ZARIADENIA\n"
+            "- BLUETOOTH V 2.4 GHZ ISM PÁSME\n"
+            "- BR/EDR VS BLE\n"
+            "- TOPOLÓGIA A BEZPEČNOSŤ"
         ),
         preview=(
-            "Lekcia sa sústreďuje na osobné bezdrôtové siete a hlavne technológiu Bluetooth."
+            "- BLUETOOTH -> AD-HOC KOMUNIKÁCIA (PICONET), KRÁTKY DOSAH, NÍZKY VÝKON\n"
+            "- 2 HLAVNÉ VETVY: BR/EDR = AUDIO, BLE = IOT A SENZORY\n"
+            "- PICONET = 1 PRIMARY + MAX 7 ACTIVE SECONDARY\n"
+            "- SCATTERNET = VIAC PREPOJENÝCH PICONETOV\n"
+            "- PRÍSTUP K MÉDIU: TDD + SLOTY 625 US, PRIMARY RIADI KOMUNIKÁCIU\n"
+            "- ŽIADNE CSMA\n"
+            "- RF: FHSS, 79 KANÁLOV, 1600 HOPS/S\n"
+            "- FHSS ZNIŽUJE INTERFERENCIE\n"
+            "- LOGICKÉ SPOJE: SCO = HLAS, ACL = DÁTA + ARQ\n"
+            "- BEZPEČNOSŤ: PAIRING -> LINK KEY, AUTENTIZÁCIA, ŠIFROVANIE"
         ),
         detail=(
-            "WPAN technológie slúžia na spojenie zariadení na krátku vzdialenosť.\n\n"
+            "WPAN technológie slúžia na spojenie jednoduchých zariadení na krátku "
+            "vzdialenosť s dôrazom na nízky výkon a jednoduchú komunikáciu.\n\n"
             "Focus areas:\n"
-            "- Bluetooth\n"
-            "- párovanie zariadení\n"
-            "- typické použitie WPAN"
+            "- Bluetooth BR/EDR a BLE\n"
+            "- piconet, scatternet a prístup k médiu\n"
+            "- FHSS, SCO a ACL spoje\n"
+            "- pairing, autentizácia a šifrovanie"
         ),
         ascii_header=LESSON_HEADERS["wifi_networks"],
     ),
@@ -262,21 +319,31 @@ LESSONS = (
         key="mobile_networks",
         title="WIRELESS LOCAL AREA NETWORKS (WI-FI, 802.11)",
         description=(
-            "- WI-FI\n"
-            "- IEEE 802.11\n"
-            "- ACCESS POINT\n"
-            "- KANÁLY A PÁSMA"
+            "- WI-FI = BEZDRÔTOVÁ LAN TECHNOLÓGIA (IEEE 802.11)\n"
+            "- DOMINANTNÉ PRIPOJENIE ZARIADENÍ\n"
+            "- BSS / ESS / DS ARCHITEKTÚRA\n"
+            "- PHY, MAC A BEZPEČNOSŤ"
         ),
         preview=(
-            "Záverečná lekcia pokrýva lokálne bezdrôtové siete Wi‑Fi a základné princípy "
-            "štandardu 802.11."
+            "- ZÁKLADNÉ VLASTNOSTI: TDD, POLODUPLEX, ROAMING MEDZI AP\n"
+            "- TOPOLOGIE: INFRAŠTRUKTÚRNA (AP) A AD-HOC (IBSS)\n"
+            "- PRÍSTUP K MÉDIU: CSMA/CA (DCF), ACK + BACKOFF\n"
+            "- RTS/CTS RIEŠI HIDDEN NODE\n"
+            "- MAC RÁMEC: AŽ 4 ADRESY, TO DS / FROM DS URČUJÚ SMER\n"
+            "- ROAMING: SCANNING -> AUTENTIZÁCIA -> ASOCIÁCIA\n"
+            "- L2 VS L3 ROAMING\n"
+            "- PHY: OFDM, DSSS, RÔZNE GENERÁCIE WI-FI\n"
+            "- BEZPEČNOSŤ: WEP, WPA, WPA2, WPA3\n"
+            "- 4-WAY HANDSHAKE, PMK -> PTK"
         ),
         detail=(
-            "Wi‑Fi siete patria medzi najbežnejšie bezdrôtové LAN technológie.\n\n"
+            "Wi‑Fi siete patria medzi najbežnejšie bezdrôtové LAN technológie a tvoria "
+            "základ lokálneho bezdrôtového pripojenia.\n\n"
             "Focus areas:\n"
-            "- 802.11 rodina štandardov\n"
-            "- access point a klienti\n"
-            "- pásma a kanály"
+            "- architektúra BSS, ESS a DS\n"
+            "- CSMA/CA, roaming a MAC rámce\n"
+            "- PHY vrstvy a generácie 802.11\n"
+            "- WPA2/WPA3 a 4-way handshake"
         ),
         ascii_header=LESSON_HEADERS["mobile_networks"],
     ),
