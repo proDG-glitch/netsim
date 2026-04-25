@@ -27,6 +27,8 @@ from netsim.ui.state import DIFFICULTY_MENU, MAIN_MENU, AppState, Screen
 LESSONS_LIST_HEIGHT = len(LESSONS) + 6
 LESSONS_MENU_TOTAL_HEIGHT = LESSONS_LIST_HEIGHT + 7 + 14
 LESSONS_PERCENT_HEIGHT = LESSONS_MENU_TOTAL_HEIGHT - LESSONS_LIST_HEIGHT
+HOME_MENU_HEIGHT = 8
+HOME_INFO_HEIGHT = LESSONS_MENU_TOTAL_HEIGHT - HOME_MENU_HEIGHT
 NETSIM_LOGO = (
     Path(__file__).resolve().parents[2] / "assets" / "ascii" / "netsim_logo.txt"
 ).read_text(encoding="utf-8").strip("\n")
@@ -322,16 +324,31 @@ def menu_panel(state: AppState) -> Panel:
         style = "#04101b on #8fe0ff bold" if index == state.main_menu_index else "#d8efff"
         prefix = ">" if index == state.main_menu_index else " "
         lines.append(f"{prefix} {label}\n", style=style)
-    return Panel(lines, title="MAIN MENU", border_style="#53b4ff", padding=(1, 1))
+    return Panel(lines, title="MAIN MENU", border_style="#53b4ff", padding=(1, 1), height=HOME_MENU_HEIGHT)
 
 
 def home_info_panel(state: AppState) -> Panel:
     key = state.current_menu_key()
     descriptions = {
-        "lessons": "Start the structured wireless-network lessons with built-in JSON-backed quizzes.",
+        "lessons": (
+            "Test key concepts from wireless networking: signals, Wi-Fi, Bluetooth, "
+            "WSN, mesh, and mobile networks.\n\n"
+            "Focus on:\n\n"
+            "how data is transmitted and accessed (CSMA/CA)\n"
+            "network types and architectures\n"
+            "routing and performance (SNR, interference)\n"
+            "basic security mechanisms\n\n"
+            "Mix of straightforward and tricky exam-style questions."
+        ),
         "quit": "Exit the simulator.",
     }
-    return Panel(Text(descriptions[key].upper(), style="#d8efff"), title="INFO", border_style="#53b4ff", padding=(1, 1))
+    return Panel(
+        Text(descriptions[key].upper(), style="#d8efff"),
+        title="INFO",
+        border_style="#53b4ff",
+        padding=(1, 1),
+        height=HOME_INFO_HEIGHT,
+    )
 
 
 def architecture_sidebar(state: AppState) -> Group:
